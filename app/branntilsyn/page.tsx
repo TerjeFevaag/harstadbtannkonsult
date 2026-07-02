@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Phone, Mail, CheckCircle, AlertTriangle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
@@ -78,6 +79,18 @@ export default function BranntilsynPage() {
                 <p className="text-brand-darkgray leading-relaxed mb-8">
                   Alle bygninger i Norge skal tilfredsstille et minimum brannsikkerhetsnivå tilsvarende det som gjaldt for nybygg i 1985 (BF85). Eldre bygg som ikke oppfyller dette kravet skal utbedres. Harstad har mange eldre bygninger, blant annet i sentrum og ved Trondenes, som kan ha behov for branntekniske tiltak.
                 </p>
+              </ScrollReveal>
+
+              <ScrollReveal variant="scale" className="mb-10">
+                <div className="relative h-64 lg:h-80 rounded-[10px] overflow-hidden border border-brand-gray">
+                  <Image
+                    src="/images/service-branntilsyn.jpg"
+                    alt="Kontroll av brannslukkere under branntilsyn"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 700px"
+                  />
+                </div>
               </ScrollReveal>
 
               <ScrollReveal>
