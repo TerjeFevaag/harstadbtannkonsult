@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: 'Brannprosjektering i Harstad | Harstad Brannkonsult',
   description:
     'Harstad Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+  icons: {
+    icon: '/images/Favicon.png',
+  },
   alternates: {
     canonical: 'https://www.harstadbrannkonsult.no',
   },
