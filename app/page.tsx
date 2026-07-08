@@ -380,7 +380,7 @@ export default function HomePage() {
               Få gratis tilbud
             </Link>
             <a
-              href="tel:+4700000000"
+              href="tel:+4740051437"
               className="border border-brand-white/40 text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:bg-brand-white hover:text-brand-black transition-all duration-200 flex items-center gap-2"
             >
               <Phone size={16} /> Ring oss

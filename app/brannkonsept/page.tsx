@@ -191,8 +191,8 @@ export default function BrannkonseptPage() {
                     Kontakt oss
                   </Link>
                   <div className="space-y-3 pt-4 border-t border-brand-gray">
-                    <a href="tel:+4700000000" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors text-sm">
-                      <Phone size={14} /> +47 000 00 000
+                    <a href="tel:+4740051437" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors text-sm">
+                      <Phone size={14} /> +47 400 51 437
                     </a>
                     <a href="mailto:post@harstadbrannkonsult.no" className="flex items-center gap-2 text-brand-darkgray hover:text-brand-orange transition-colors text-sm">
                       <Mail size={14} /> post@harstadbrannkonsult.no

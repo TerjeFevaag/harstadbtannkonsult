@@ -7,7 +7,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata: Metadata = {
   title: 'Kontakt Harstad Brannkonsult | Få uforpliktende tilbud',
   description:
-    'Kontakt Harstad Brannkonsult for uforpliktende tilbud på brannkonsept og brannprosjektering i Harstad. Vi svarer innen 24 timer. Ring +47 000 00 000.',
+    'Kontakt Harstad Brannkonsult for uforpliktende tilbud på brannkonsept og brannprosjektering i Harstad. Vi svarer innen 24 timer. Ring +47 400 51 437.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/kontakt-oss' },
 }
 
@@ -50,7 +50,7 @@ export default function KontaktOssPage() {
                 <h3 className="font-bold text-brand-black text-lg mb-6">Kontaktinformasjon</h3>
                 <div className="space-y-5">
                   {[
-                    { icon: Phone, label: 'Telefon', value: '+47 000 00 000', href: 'tel:+4700000000' },
+                    { icon: Phone, label: 'Telefon', value: '+47 400 51 437', href: 'tel:+4740051437' },
                     { icon: Mail, label: 'E-post', value: 'post@harstadbrannkonsult.no', href: 'mailto:post@harstadbrannkonsult.no' },
                     { icon: MapPin, label: 'Adresse', value: '[Gateadresse], Harstad', href: null },
                     { icon: Clock, label: 'Åpningstider', value: 'Man–Fre 08:00–16:00', href: null },

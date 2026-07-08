@@ -54,7 +54,7 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   name: 'Harstad Brannkonsult AS',
   description: 'Brannprosjektering og brannkonsept i Harstad',
-  telephone: '+47 000 00 000',
+  telephone: '+47 400 51 437',
   email: 'post@harstadbrannkonsult.no',
   address: {
     '@type': 'PostalAddress',
