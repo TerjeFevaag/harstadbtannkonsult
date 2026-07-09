@@ -6,9 +6,9 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Brannkonsept i Harstad | Harstad Brannkonsult',
+  title: 'Brannkonsept i Harstad | Brannkonsult AS',
   description:
-    'Harstad Brannkonsult utarbeider brannkonsept i Harstad og Sør-Troms. Sentralt godkjent TKL 1+2. Fra ca. 15 000 kr inkl. branntegninger. Fastpris alltid.',
+    'Brannkonsult AS utarbeider brannkonsept i Harstad og Sør-Troms. Sentralt godkjent TKL 1+2. Fra ca. 15 000 kr inkl. branntegninger. Fastpris alltid.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/brannkonsept' },
 }
 
@@ -85,7 +85,7 @@ export default function BrannkonseptPage() {
               <ScrollReveal>
                 <h2 className="text-brand-black text-2xl font-black mb-4">Hva inneholder et brannkonsept?</h2>
                 <p className="text-brand-darkgray leading-relaxed mb-6">
-                  Et komplett brannkonsept fra Harstad Brannkonsult inneholder:
+                  Et komplett brannkonsept fra Brannkonsult AS inneholder:
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[

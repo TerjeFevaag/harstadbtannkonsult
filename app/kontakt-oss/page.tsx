@@ -5,9 +5,9 @@ import ContactForm from '@/components/ContactForm'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Kontakt Harstad Brannkonsult | Få uforpliktende tilbud',
+  title: 'Kontakt Brannkonsult AS | Få uforpliktende tilbud',
   description:
-    'Kontakt Harstad Brannkonsult for uforpliktende tilbud på brannkonsept og brannprosjektering i Harstad. Vi svarer innen 24 timer. Ring +47 400 51 437.',
+    'Kontakt Brannkonsult AS for uforpliktende tilbud på brannkonsept og brannprosjektering i Harstad. Vi svarer innen 24 timer. Ring +47 400 51 437.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/kontakt-oss' },
 }
 
@@ -25,7 +25,7 @@ export default function KontaktOssPage() {
             <div className="w-1 bg-brand-orange rounded-full shrink-0" />
             <div>
               <h1 className="text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-                Kontakt Harstad Brannkonsult
+                Kontakt Brannkonsult AS
               </h1>
               <p className="hero-3 text-brand-darkgray text-lg mt-4 max-w-xl leading-relaxed">
                 Ta kontakt for et uforpliktende tilbud. Vi svarer innen 24 timer.

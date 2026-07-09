@@ -4,7 +4,7 @@ import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Forebygg pipebrann med enkle grep | Harstad Brannkonsult',
+  title: 'Forebygg pipebrann med enkle grep | Brannkonsult AS',
   description:
     'Lær hvordan du forebygger pipebrann. Regelmessig feieservice, riktig ved og god trekk er nøkkelen. Råd fra sentralt godkjente brannrådgivere i Harstad.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/artikler/pipebrann' },
@@ -118,7 +118,7 @@ export default function PipebrannPage() {
 
               <ScrollReveal>
                 <p className="leading-relaxed">
-                  Har du spørsmål om brannsikkerhet i din bolig eller ditt bygg? Harstad Brannkonsult er sentralt godkjente brannrådgivere og hjelper deg gjerne med brannkonsept, brannprosjektering og branntilsyn.{' '}
+                  Har du spørsmål om brannsikkerhet i din bolig eller ditt bygg? Brannkonsult AS er sentralt godkjente brannrådgivere og hjelper deg gjerne med brannkonsept, brannprosjektering og branntilsyn.{' '}
                   <Link href="/kontakt-oss" className="text-brand-orange font-bold hover:underline">
                     Ta kontakt med oss her.
                   </Link>

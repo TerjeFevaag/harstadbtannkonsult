@@ -6,7 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Brannprosjektering i Harstad | Harstad Brannkonsult',
+  title: 'Brannprosjektering i Harstad | Brannkonsult AS',
   description:
     'Profesjonell brannprosjektering i Harstad og Sør-Troms. Sentralt godkjent TKL 1+2. Fast pris fra ca. 15 000 kr. Tilbygg, bruksendring, nybygg.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/brannprosjektering' },

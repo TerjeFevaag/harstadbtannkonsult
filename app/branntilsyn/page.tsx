@@ -6,7 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Branntilsyn og branninspeksjon i Harstad | Harstad Brannkonsult',
+  title: 'Branntilsyn og branninspeksjon i Harstad | Brannkonsult AS',
   description:
     'Branntilsyn og branninspeksjon i Harstad. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/branntilsyn' },

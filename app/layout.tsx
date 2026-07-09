@@ -21,9 +21,9 @@ const dancing = Dancing_Script({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.harstadbrannkonsult.no'),
-  title: 'Brannprosjektering i Harstad | Harstad Brannkonsult',
+  title: 'Brannprosjektering i Harstad | Brannkonsult AS',
   description:
-    'Harstad Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   icons: {
     icon: '/images/Favicon.png',
   },
@@ -31,11 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://www.harstadbrannkonsult.no',
   },
   openGraph: {
-    title: 'Brannprosjektering i Harstad | Harstad Brannkonsult',
+    title: 'Brannprosjektering i Harstad | Brannkonsult AS',
     description:
-      'Harstad Brannkonsult tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms.',
+      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms.',
     url: 'https://www.harstadbrannkonsult.no',
-    siteName: 'Harstad Brannkonsult',
+    siteName: 'Brannkonsult AS',
     locale: 'nb_NO',
     type: 'website',
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: '/images/hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Harstad Brannkonsult',
+        alt: 'Brannkonsult AS',
       },
     ],
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Harstad Brannkonsult AS',
+  name: 'Brannkonsult AS',
   description: 'Brannprosjektering og brannkonsept i Harstad',
   telephone: '+47 400 51 437',
   email: 'post@harstadbrannkonsult.no',

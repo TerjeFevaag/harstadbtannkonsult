@@ -5,9 +5,9 @@ import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Om Harstad Brannkonsult | Sentralt godkjent brannrådgiver',
+  title: 'Om Brannkonsult AS | Sentralt godkjent brannrådgiver',
   description:
-    'Harstad Brannkonsult er et sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms.',
+    'Brannkonsult AS er et sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/om-oss' },
 }
 
@@ -34,7 +34,7 @@ export default function OmOssPage() {
             <div className="w-1 bg-brand-orange rounded-full shrink-0" />
             <div>
               <h1 className="text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-                Om Harstad Brannkonsult
+                Om Brannkonsult AS
               </h1>
               <p className="hero-3 text-brand-darkgray text-lg mt-4 max-w-xl leading-relaxed">
                 Sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013.
@@ -79,7 +79,7 @@ export default function OmOssPage() {
               <div className="relative rounded-[10px] overflow-hidden h-80 lg:h-96 border border-brand-gray">
                 <Image
                   src="/images/about-team.png"
-                  alt="Harstad Brannkonsult team"
+                  alt="Brannkonsult AS team"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -133,7 +133,7 @@ export default function OmOssPage() {
           <ScrollReveal className="max-w-3xl border border-brand-gray rounded-[10px] p-8 lg:p-10">
             <h2 className="text-brand-black text-3xl font-black mb-5">Nøytral rådgiver</h2>
             <p className="text-brand-darkgray leading-relaxed mb-4">
-              Harstad Brannkonsult selger ingen produkter og tilbyr ingen håndverkertjenester. Vi er utelukkende en rådgivende part — det sikrer at rådet vi gir alltid er i ditt beste interesse, og ikke påvirket av salgsinteresser.
+              Brannkonsult AS selger ingen produkter og tilbyr ingen håndverkertjenester. Vi er utelukkende en rådgivende part — det sikrer at rådet vi gir alltid er i ditt beste interesse, og ikke påvirket av salgsinteresser.
             </p>
             <p className="text-brand-darkgray leading-relaxed">
               Mange av kundene våre er arkitekter og entreprenører som setter pris på at vi er lett tilgjengelige og raskt kan svare på spørsmål underveis i prosjektet — uten ekstra kostnad.

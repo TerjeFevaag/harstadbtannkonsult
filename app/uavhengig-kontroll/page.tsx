@@ -6,7 +6,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Uavhengig kontroll av brann i Harstad | Harstad Brannkonsult',
+  title: 'Uavhengig kontroll av brann i Harstad | Brannkonsult AS',
   description:
     'Uavhengig kontroll (UK) av brannkonsept i Harstad. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/uavhengig-kontroll' },
