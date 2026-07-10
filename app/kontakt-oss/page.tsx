@@ -52,7 +52,7 @@ export default function KontaktOssPage() {
                   {[
                     { icon: Phone, label: 'Telefon', value: '+47 400 51 437', href: 'tel:+4740051437' },
                     { icon: Mail, label: 'E-post', value: 'post@harstadbrannkonsult.no', href: 'mailto:post@harstadbrannkonsult.no' },
-                    { icon: MapPin, label: 'Adresse', value: '[Gateadresse], Harstad', href: null },
+                    { icon: MapPin, label: 'Postadresse', value: 'Tromsø Brannkonsult AS\nGrønnegate 78/88\n9008 Tromsø', href: null },
                     { icon: Clock, label: 'Åpningstider', value: 'Man–Fre 08:00–16:00', href: null },
                   ].map(({ icon: Icon, label, value, href }, i) => (
                     <div key={i} className="flex items-start gap-4">
@@ -66,7 +66,7 @@ export default function KontaktOssPage() {
                             {value}
                           </a>
                         ) : (
-                          <p className="font-bold text-brand-black text-sm">{value}</p>
+                          <p className="font-bold text-brand-black text-sm whitespace-pre-line">{value}</p>
                         )}
                       </div>
                     </div>
