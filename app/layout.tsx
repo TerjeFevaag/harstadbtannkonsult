@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.harstadbrannkonsult.no'),
   title: 'Brannprosjektering i Harstad | Brannkonsult AS',
   description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   icons: {
     icon: '/images/Favicon.png',
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brannprosjektering i Harstad | Brannkonsult AS',
     description:
-      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms.',
+      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms.',
     url: 'https://www.harstadbrannkonsult.no',
     siteName: 'Brannkonsult AS',
     locale: 'nb_NO',

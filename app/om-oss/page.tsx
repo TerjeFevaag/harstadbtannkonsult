@@ -7,7 +7,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata: Metadata = {
   title: 'Om Brannkonsult AS | Sentralt godkjent brannrådgiver',
   description:
-    'Brannkonsult AS er et sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms.',
+    'Brannkonsult AS er et sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no/om-oss' },
 }
 

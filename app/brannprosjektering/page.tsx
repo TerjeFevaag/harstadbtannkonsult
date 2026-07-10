@@ -182,7 +182,7 @@ export default function BrannprosjekteringPage() {
                   <ul className="space-y-3">
                     {[
                       { href: '/brannkonsept', label: 'Brannkonsept' },
-                      { href: '/branntilsyn', label: 'Branntilsyn' },
+                      { href: '/branninspeksjon', label: 'Branninspeksjon' },
                       { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
                     ].map((link) => (
                       <li key={link.href}>

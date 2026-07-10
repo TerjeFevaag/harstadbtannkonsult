@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Branntilsyn og branninspeksjon i Harstad | Brannkonsult AS',
   description:
     'Branntilsyn og branninspeksjon i Harstad. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.',
-  alternates: { canonical: 'https://www.harstadbrannkonsult.no/branntilsyn' },
+  alternates: { canonical: 'https://www.harstadbrannkonsult.no/branninspeksjon' },
 }
 
 const faqItems = [
@@ -40,7 +40,7 @@ const faqItems = [
   },
 ]
 
-export default function BranntilsynPage() {
+export default function BranninspeksjonPage() {
   return (
     <>
       <section className="bg-brand-lightgray py-16 lg:py-20 border-b border-brand-gray">
@@ -48,7 +48,7 @@ export default function BranntilsynPage() {
           <div className="hero-1 flex items-center gap-2 text-brand-darkgray text-sm mb-6">
             <Link href="/" className="hover:text-brand-orange transition-colors">Hjem</Link>
             <span>/</span>
-            <span>Branntilsyn</span>
+            <span>Branninspeksjon</span>
           </div>
           <div className="hero-2 bg-brand-white border border-brand-gray rounded-[10px] p-8 lg:p-10 flex gap-6">
             <div className="w-1 bg-brand-orange rounded-full shrink-0" />

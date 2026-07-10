@@ -118,7 +118,7 @@ export default function PipebrannPage() {
 
               <ScrollReveal>
                 <p className="leading-relaxed">
-                  Har du spørsmål om brannsikkerhet i din bolig eller ditt bygg? Brannkonsult AS er sentralt godkjente brannrådgivere og hjelper deg gjerne med brannkonsept, brannprosjektering og branntilsyn.{' '}
+                  Har du spørsmål om brannsikkerhet i din bolig eller ditt bygg? Brannkonsult AS er sentralt godkjente brannrådgivere og hjelper deg gjerne med brannkonsept, brannprosjektering og branninspeksjon.{' '}
                   <Link href="/kontakt-oss" className="text-brand-orange font-bold hover:underline">
                     Ta kontakt med oss her.
                   </Link>

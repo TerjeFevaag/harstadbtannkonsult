@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
             <p className="text-brand-white/60 text-sm leading-relaxed mb-6">
               Sentralt godkjent foretak for brannprosjektering i tiltaksklasse 1 og 2. Vi hjelper
-              deg med brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms.
+              deg med brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms.
             </p>
             <div className="flex gap-4">
               <a href="#" aria-label="Facebook" className="text-brand-white/50 hover:text-brand-orange transition-colors">
@@ -88,7 +88,7 @@ export default function Footer() {
               {[
                 { href: '/brannkonsept', label: 'Brannkonsept' },
                 { href: '/brannprosjektering', label: 'Brannprosjektering' },
-                { href: '/branntilsyn', label: 'Branntilsyn' },
+                { href: '/branninspeksjon', label: 'Branninspeksjon' },
                 { href: '/uavhengig-kontroll', label: 'Uavhengig kontroll' },
               ].map((link) => (
                 <li key={link.href}>

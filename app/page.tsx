@@ -10,7 +10,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata: Metadata = {
   title: 'Brannprosjektering i Harstad | Brannkonsult AS',
   description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branntilsyn i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
   alternates: { canonical: 'https://www.harstadbrannkonsult.no' },
 }
 
@@ -34,10 +34,10 @@ const services = [
   {
     number: '03',
     iconImage: '/images/icon-branntilsyn.png',
-    title: 'Branntilsyn',
+    title: 'Branninspeksjon',
     description:
       'Har du fått pålegg etter branntilsyn, eller ønsker du en grundig gjennomgang av byggets brannsikkerhet? Vi inspiserer hele bygningen og utarbeider tilstandsrapport.',
-    href: '/branntilsyn',
+    href: '/branninspeksjon',
   },
   {
     number: '04',
