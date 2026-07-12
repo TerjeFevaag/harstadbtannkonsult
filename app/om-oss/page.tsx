@@ -3,13 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
+import JsonLd from '@/components/JsonLd'
+import { buildMetadata } from '@/lib/metadata'
+import { breadcrumbSchema } from '@/lib/schema'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Om Brannkonsult AS | Sentralt godkjent brannrådgiver',
   description:
-    'Brannkonsult AS er et sentralt godkjent brannrådgiverfirma med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms.',
-  alternates: { canonical: 'https://www.harstadbrannkonsult.no/om-oss' },
-}
+    'Sentralt godkjent brannrådgiverfirma i Harstad med over 1200 prosjekter siden 2013. Vi tilbyr brannkonsept, brannprosjektering og branninspeksjon i Sør-Troms.',
+  path: '/om-oss',
+})
 
 const process = [
   { step: '1', title: 'Kontakt oss', desc: 'Send forespørsel med informasjon om prosjektet.' },
@@ -22,6 +25,11 @@ const process = [
 export default function OmOssPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Hjem', path: '/' },
+        { name: 'Om oss', path: '/om-oss' },
+      ])} />
+
       {/* Header */}
       <section className="bg-brand-lightgray py-16 lg:py-20 border-b border-brand-gray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">

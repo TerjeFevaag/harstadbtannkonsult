@@ -4,6 +4,7 @@ import './globals.css'
 import TopBar from '@/components/TopBar'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { buildMetadata, SITE_URL, SITE_NAME } from '@/lib/metadata'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -20,40 +21,24 @@ const dancing = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.harstadbrannkonsult.no'),
-  title: 'Brannprosjektering i Harstad | Brannkonsult AS',
-  description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: '/images/Favicon.png',
   },
-  alternates: {
-    canonical: 'https://www.harstadbrannkonsult.no',
-  },
-  openGraph: {
+  ...buildMetadata({
     title: 'Brannprosjektering i Harstad | Brannkonsult AS',
     description:
-      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms.',
-    url: 'https://www.harstadbrannkonsult.no',
-    siteName: 'Brannkonsult AS',
-    locale: 'nb_NO',
-    type: 'website',
-    images: [
-      {
-        url: '/images/hero.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Brannkonsult AS',
-      },
-    ],
-  },
+      'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
+    path: '/',
+  }),
 }
 
-const jsonLd = {
+const localBusinessJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Brannkonsult AS',
+  '@type': ['LocalBusiness', 'ProfessionalService'],
+  name: SITE_NAME,
   description: 'Brannprosjektering og brannkonsept i Harstad',
+  image: `${SITE_URL}/images/om-oss.jpg`,
   telephone: '+47 400 51 437',
   email: 'post@harstadbrannkonsult.no',
   address: {
@@ -61,9 +46,33 @@ const jsonLd = {
     addressLocality: 'Harstad',
     addressCountry: 'NO',
   },
-  url: 'https://www.harstadbrannkonsult.no',
+  areaServed: [
+    { '@type': 'City', name: 'Harstad' },
+    { '@type': 'AdministrativeArea', name: 'Sør-Troms' },
+    { '@type': 'AdministrativeArea', name: 'Troms' },
+    { '@type': 'AdministrativeArea', name: 'Nordland' },
+  ],
+  url: SITE_URL,
   priceRange: 'Fra kr 15 000',
   hasCredential: 'Sentralt godkjent tiltaksklasse 1 og 2',
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/logo-black.png`,
+  telephone: '+47 400 51 437',
+  email: 'post@harstadbrannkonsult.no',
+}
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: SITE_URL,
+  inLanguage: 'nb-NO',
 }
 
 export default function RootLayout({
@@ -76,7 +85,15 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className={lato.className}>

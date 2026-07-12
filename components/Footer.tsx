@@ -2,32 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail } from 'lucide-react'
 
-function FacebookIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  )
-}
-function InstagramIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  )
-}
-function LinkedinIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  )
-}
-
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-brand-white border-t-2 border-brand-orange">
@@ -42,17 +16,6 @@ export default function Footer() {
               Sentralt godkjent foretak for brannprosjektering i tiltaksklasse 1 og 2. Vi hjelper
               deg med brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms.
             </p>
-            <div className="flex gap-4">
-              <a href="#" aria-label="Facebook" className="text-brand-white/50 hover:text-brand-orange transition-colors">
-                <FacebookIcon />
-              </a>
-              <a href="#" aria-label="Instagram" className="text-brand-white/50 hover:text-brand-orange transition-colors">
-                <InstagramIcon />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="text-brand-white/50 hover:text-brand-orange transition-colors">
-                <LinkedinIcon />
-              </a>
-            </div>
           </div>
 
           {/* Col 2: Snarveier */}
@@ -64,7 +27,7 @@ export default function Footer() {
               {[
                 { href: '/', label: 'Hjem' },
                 { href: '/om-oss', label: 'Om oss' },
-                { href: '/artikler/pipebrann', label: 'Artikler' },
+                { href: '/artikler', label: 'Artikler' },
                 { href: '/kontakt-oss', label: 'Kontakt oss' },
               ].map((link) => (
                 <li key={link.href}>

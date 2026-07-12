@@ -3,17 +3,25 @@ import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import ScrollReveal from '@/components/ScrollReveal'
+import JsonLd from '@/components/JsonLd'
+import { buildMetadata } from '@/lib/metadata'
+import { breadcrumbSchema } from '@/lib/schema'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Kontakt Brannkonsult AS | Få uforpliktende tilbud',
   description:
     'Kontakt Brannkonsult AS for uforpliktende tilbud på brannkonsept og brannprosjektering i Harstad. Vi svarer innen 24 timer. Ring +47 400 51 437.',
-  alternates: { canonical: 'https://www.harstadbrannkonsult.no/kontakt-oss' },
-}
+  path: '/kontakt-oss',
+})
 
 export default function KontaktOssPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Hjem', path: '/' },
+        { name: 'Kontakt oss', path: '/kontakt-oss' },
+      ])} />
+
       <section className="bg-brand-lightgray py-16 lg:py-20 border-b border-brand-gray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-darkgray text-sm mb-6">

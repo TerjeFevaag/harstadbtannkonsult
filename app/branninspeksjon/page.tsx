@@ -4,13 +4,16 @@ import Link from 'next/link'
 import { Phone, Mail, CheckCircle, AlertTriangle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
+import JsonLd from '@/components/JsonLd'
+import { buildMetadata } from '@/lib/metadata'
+import { breadcrumbSchema, faqSchema, serviceSchema } from '@/lib/schema'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Branntilsyn og branninspeksjon i Harstad | Brannkonsult AS',
   description:
-    'Branntilsyn og branninspeksjon i Harstad. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan. Kontakt oss i dag.',
-  alternates: { canonical: 'https://www.harstadbrannkonsult.no/branninspeksjon' },
-}
+    'Branntilsyn og branninspeksjon i Harstad. Fått pålegg fra brannvesenet? Vi inspiserer bygningen og utarbeider tilstandsrapport og handlingsplan.',
+  path: '/branninspeksjon',
+})
 
 const faqItems = [
   {
@@ -43,6 +46,17 @@ const faqItems = [
 export default function BranninspeksjonPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Hjem', path: '/' },
+        { name: 'Branninspeksjon', path: '/branninspeksjon' },
+      ])} />
+      <JsonLd data={serviceSchema({
+        name: 'Branninspeksjon',
+        description: 'Uavhengig branninspeksjon med tilstandsrapport og handlingsplan for bygg i Harstad og Sør-Troms.',
+        path: '/branninspeksjon',
+      })} />
+      <JsonLd data={faqSchema(faqItems)} />
+
       <section className="bg-brand-lightgray py-16 lg:py-20 border-b border-brand-gray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-darkgray text-sm mb-6">

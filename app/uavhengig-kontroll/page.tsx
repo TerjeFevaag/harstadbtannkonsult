@@ -4,13 +4,16 @@ import Link from 'next/link'
 import { Phone, Mail, CheckCircle, ShieldCheck } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
+import JsonLd from '@/components/JsonLd'
+import { buildMetadata } from '@/lib/metadata'
+import { breadcrumbSchema, faqSchema, serviceSchema } from '@/lib/schema'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Uavhengig kontroll av brann i Harstad | Brannkonsult AS',
   description:
     'Uavhengig kontroll (UK) av brannkonsept i Harstad. Sentralt godkjent foretak. Vi gjennomgår brannkonsept, branntegninger og løsningsvalg mot TEK17. Fast pris.',
-  alternates: { canonical: 'https://www.harstadbrannkonsult.no/uavhengig-kontroll' },
-}
+  path: '/uavhengig-kontroll',
+})
 
 const faqItems = [
   {
@@ -38,6 +41,17 @@ const faqItems = [
 export default function UavhengigKontrollPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Hjem', path: '/' },
+        { name: 'Uavhengig kontroll', path: '/uavhengig-kontroll' },
+      ])} />
+      <JsonLd data={serviceSchema({
+        name: 'Uavhengig kontroll av brann',
+        description: 'Uavhengig kontroll (UK) av brannprosjektering i tiltaksklasse 2 og høyere for bygg i Harstad og Sør-Troms.',
+        path: '/uavhengig-kontroll',
+      })} />
+      <JsonLd data={faqSchema(faqItems)} />
+
       <section className="bg-brand-lightgray py-16 lg:py-20 border-b border-brand-gray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hero-1 flex items-center gap-2 text-brand-darkgray text-sm mb-6">

@@ -4,13 +4,16 @@ import Link from 'next/link'
 import { FileText, Phone, Mail, CheckCircle } from 'lucide-react'
 import FAQAccordion from '@/components/FAQAccordion'
 import ScrollReveal from '@/components/ScrollReveal'
+import JsonLd from '@/components/JsonLd'
+import { buildMetadata } from '@/lib/metadata'
+import { breadcrumbSchema, faqSchema, serviceSchema } from '@/lib/schema'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'Brannkonsept i Harstad | Brannkonsult AS',
   description:
     'Brannkonsult AS utarbeider brannkonsept i Harstad og Sør-Troms. Sentralt godkjent TKL 1+2. Fra ca. 15 000 kr inkl. branntegninger. Fastpris alltid.',
-  alternates: { canonical: 'https://www.harstadbrannkonsult.no/brannkonsept' },
-}
+  path: '/brannkonsept',
+})
 
 const faqItems = [
   {
@@ -48,6 +51,17 @@ const faqItems = [
 export default function BrannkonseptPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Hjem', path: '/' },
+        { name: 'Brannkonsept', path: '/brannkonsept' },
+      ])} />
+      <JsonLd data={serviceSchema({
+        name: 'Brannkonsept',
+        description: 'Utarbeidelse av brannkonsept for byggesaker i Harstad og Sør-Troms.',
+        path: '/brannkonsept',
+      })} />
+      <JsonLd data={faqSchema(faqItems)} />
+
       {/* Header — bordered spec-sheet banner */}
       <section className="bg-brand-lightgray py-16 lg:py-20 border-b border-brand-gray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">

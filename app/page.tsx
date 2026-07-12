@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle, ArrowRight, Phone } from 'lucide-react'
@@ -6,13 +5,10 @@ import ServiceCard from '@/components/ServiceCard'
 import FAQAccordion from '@/components/FAQAccordion'
 import ReviewCard from '@/components/ReviewCard'
 import ScrollReveal from '@/components/ScrollReveal'
+import JsonLd from '@/components/JsonLd'
+import { faqSchema } from '@/lib/schema'
 
-export const metadata: Metadata = {
-  title: 'Brannprosjektering i Harstad | Brannkonsult AS',
-  description:
-    'Brannkonsult AS tilbyr brannkonsept, brannprosjektering og branninspeksjon i Harstad og Sør-Troms. Sentralt godkjent foretak. Få uforpliktende tilbud i dag.',
-  alternates: { canonical: 'https://www.harstadbrannkonsult.no' },
-}
+// Metadata for this route is inherited from app/layout.tsx (identical content for path '/')
 
 const services = [
   {
@@ -164,6 +160,8 @@ const articles = [
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqSchema(faqItems)} />
+
       {/* ── HERO — Maritime Grid: text left in bordered frame, image right ── */}
       <section className="bg-brand-dark grid-pattern">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-0">
@@ -324,7 +322,7 @@ export default function HomePage() {
           <ScrollReveal className="flex items-end justify-between mb-10">
             <h2 className="text-brand-black text-3xl lg:text-4xl font-black">Nyttige artikler</h2>
             <Link
-              href="/artikler/pipebrann"
+              href="/artikler"
               className="text-brand-orange font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
             >
               Se alle <ArrowRight size={16} />
