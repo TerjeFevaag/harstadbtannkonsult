@@ -46,6 +46,11 @@ const faqItems = [
     answer:
       'Leveringstid avhenger av prosjektets omfang og vår arbeidsbelastning. For de fleste prosjekter leverer vi innen 5–10 virkedager etter mottatt bestilling og komplett underlag. Har du tidsfrist, oppgi dette i forespørselen.',
   },
+  {
+    question: 'Tilbyr dere brannkonsept utenfor Harstad?',
+    answer:
+      'Ja — foruten Harstad tilbyr vi brannkonsept i store deler av Nordland og Helgeland, blant annet Mo i Rana, Sandnessjøen, Bodø og Narvik, samt øvrige deler av Nord-Norge. Ta kontakt for et uforpliktende tilbud uansett hvor i landsdelen prosjektet ditt ligger.',
+  },
 ]
 
 export default function BrannkonseptPage() {

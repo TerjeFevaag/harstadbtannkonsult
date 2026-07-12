@@ -36,6 +36,11 @@ const faqItems = [
     answer:
       'Ja — det er faktisk et krav at den som utfører UK ikke er den samme som har prosjektert. Vi kan ta på oss uavhengig kontroll av brannkonsept utarbeidet av andre rådgivere.',
   },
+  {
+    question: 'Tilbyr dere uavhengig kontroll utenfor Harstad?',
+    answer:
+      'Ja — vi tar oppdrag i hele Helgeland og Nordland forøvrig, blant annet Mo i Rana, Bodø, Narvik og Sandnessjøen, samt resten av Nord-Norge.',
+  },
 ]
 
 export default function UavhengigKontrollPage() {

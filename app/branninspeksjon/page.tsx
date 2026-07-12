@@ -41,6 +41,11 @@ const faqItems = [
     answer:
       'Ja — alle eksisterende bygninger skal oppgraderes til et minimum tilsvarende det som gjaldt for nybygg i 1985 (BF85). For mange eldre bygg i Harstad betyr dette at det er behov for tiltak. Vi hjelper deg med å vurdere hva som er nødvendig.',
   },
+  {
+    question: 'Tilbyr dere branninspeksjon utenfor Harstad?',
+    answer:
+      'Ja — vi utfører branninspeksjon i hele Nordland og Helgeland, blant annet Mo i Rana, Bodø, Narvik og Sandnessjøen, i tillegg til resten av Nord-Norge.',
+  },
 ]
 
 export default function BranninspeksjonPage() {

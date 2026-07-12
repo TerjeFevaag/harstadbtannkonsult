@@ -41,6 +41,11 @@ const faqItems = [
     answer:
       'Vi trenger adresse, antall etasjer og bruksareal, plantegninger og en kort prosjektbeskrivelse. Jo mer informasjon vi får, jo mer presist kan vi prise oppdraget. Send det til oss på e-post eller via kontaktskjemaet.',
   },
+  {
+    question: 'Tilbyr dere brannprosjektering utenfor Harstad?',
+    answer:
+      'Ja — foruten Harstad tar vi oppdrag i hele Nordland og Helgeland, blant annet Mo i Rana, Bodø, Sandnessjøen og Narvik, samt øvrige deler av Nord-Norge.',
+  },
 ]
 
 export default function BrannprosjekteringPage() {
