@@ -52,6 +52,12 @@ export function serviceSchema({
     areaServed: [
       { '@type': 'City', name: 'Harstad' },
       { '@type': 'AdministrativeArea', name: 'Sør-Troms' },
+      { '@type': 'City', name: 'Tromsø' },
+      { '@type': 'City', name: 'Narvik' },
+      { '@type': 'City', name: 'Bodø' },
+      { '@type': 'City', name: 'Mo i Rana' },
+      { '@type': 'City', name: 'Sandnessjøen' },
+      { '@type': 'Place', name: 'Nord-Norge' },
     ],
   }
 }
