@@ -99,9 +99,9 @@ const reviews = [
   },
   {
     quote:
-      'Jeg er veldig fornøyd. Alt er proff utført og veldig fort. Flott kontakt med Thomas Hansen.',
-    author: 'Anders Sverdvik',
-    date: '24. mai 2022',
+      'Jeg kontaktet Brannkonsult i forbindelse med et utbygningsprosjekt der jeg fryktet at det ville være komplisert å tilfredsstille brannkrav som ville komme som en følge av planene. Gjennom tidlige samtaler med Brannkonsult ble det tydelig at dette kunne la seg gjøre uten så omfattende tiltak som opprinnelig fryktet. En rapport med utfyllende info om krav og praktiske løsninger ble utarbeidet, og dette førte til at jeg valgte å realisere prosjektet.',
+    author: 'Jan Arthur Grip Nilsen',
+    date: '23. januar 2023',
   },
   {
     quote:
