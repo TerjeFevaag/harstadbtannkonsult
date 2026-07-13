@@ -134,7 +134,7 @@ const faqItems = [
   {
     question: 'Tar dere oppdrag utenfor Harstad?',
     answer:
-      'Vi hjelper kunder i Harstad, Sør-Troms og hele Troms, og tar oppdrag over hele landet.',
+      'Vi hjelper kunder i Harstad og Sør-Troms, og tar oppdrag i hele Nord-Norge og resten av landet ved behov.',
   },
 ]
 

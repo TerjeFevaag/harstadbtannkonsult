@@ -49,8 +49,8 @@ const localBusinessJsonLd = {
   areaServed: [
     { '@type': 'City', name: 'Harstad' },
     { '@type': 'AdministrativeArea', name: 'Sør-Troms' },
-    { '@type': 'AdministrativeArea', name: 'Troms' },
     { '@type': 'AdministrativeArea', name: 'Nordland' },
+    { '@type': 'Place', name: 'Nord-Norge' },
   ],
   url: SITE_URL,
   priceRange: 'Fra kr 15 000',
