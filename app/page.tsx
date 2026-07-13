@@ -73,30 +73,35 @@ const stats = [
 const reviews = [
   {
     quote:
-      'Lett å få kontakt med firmaet på ulike spørsmål som dukker opp underveis. Jeg har kun hatt gode opplevelser, selv om ikke alt var helt klart for meg som ufaglært.',
-    author: 'Kirsti Andresen',
+      'På spørsmål om brannkonsept, og ansvarsrett for fagområdet, fikk vi raskt og proffesjonelt svar. Hyggelig, ryddig og konstruktiv oppfølging.',
+    author: 'Sverre Krefting',
+    company: 'Sivilarkitekt',
+    date: '30. april 2026',
   },
   {
     quote:
-      'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Ny oppdatert rapport innen kort tid. Alt til bra priser.',
-    author: 'Vegard Hals',
+      'Godt fornøyd med brannsikringsvurdering som ble gjort, og at firmaet tok ansvarsrett for brannsikkerhet i vår sak. Rapporten førte til ferdigattest hos kommunen for tilbygg til en dobbeltgarasje.',
+    author: 'Harald Solberg',
+    date: '8. februar 2023',
   },
   {
     quote:
-      'Brannkonsult AS er lette å samarbeide med, de svarer raskt, finner gode løsninger og leverer arbeid av jevnt høy kvalitet. Brannotatene deres er praktiske og enkle å bruke.',
-    author: 'Daniel Hagelin',
-    company: 'Hagelin Byggservice',
+      'Veldig fornøyd med utført prosjektering og profesjonalisme av Brannkonsult AS!',
+    author: 'Wojtek Hryniewiecki',
+    company: 'Front Arkitektur AS',
+    date: '13. oktober 2024',
   },
   {
     quote:
-      'Brannkonsult AS er faglig dyktige, ryddige og løsningsorienterte. Det er viktig for oss som arkitekter og for våre kunder.',
-    author: 'Jon Cederbrand',
-    company: 'Jon Cederbrand Arkitektur AS',
+      'Som privatperson i et eget ombyggingsprosjekt i gammel murgård, som ble fanget inn i TEK17, ble jeg overrasket av omfanget og nødvendigheten av å benytte eksterne konsulenter. Når det er sagt, så var jeg fornøyd med både kvaliteten og tigjengeligheten av tjenestene til Brannkonsult.',
+    author: 'Helge Torp',
+    date: '7. juni 2022',
   },
   {
     quote:
-      'Svært god service. Trygt med folk som kan faget sitt. Fikk svært god hjelp og mange gode tips og innspill under byggeprosessen.',
-    author: 'Torger Vistnes',
+      'Jeg er veldig fornøyd. Alt er proff utført og veldig fort. Flott kontakt med Thomas Hansen.',
+    author: 'Anders Sverdvik',
+    date: '24. mai 2022',
   },
   {
     quote:
