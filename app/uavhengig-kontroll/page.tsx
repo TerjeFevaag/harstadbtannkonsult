@@ -17,19 +17,19 @@ export const metadata: Metadata = buildMetadata({
 
 const faqItems = [
   {
-    question: 'Hva er uavhengig kontroll av brann?',
+    question: 'Hva vil det egentlig si at kontrollen er "uavhengig"?',
     answer:
-      'Uavhengig kontroll (UK) er en obligatorisk kvalitetssikring der en uavhengig part kontrollerer at brannprosjekteringen er utført i henhold til gjeldende forskrifter. Kontrollen utføres av et firma uten tilknytning til det som har prosjektert.',
+      'At firmaet som kontrollerer brannkonseptet ikke har vært involvert i å utarbeide det. Det er et lovkrav, ikke bare god skikk — poenget er å få et ubundet blikk på om prosjekteringen faktisk holder mål.',
   },
   {
-    question: 'Når er det krav om uavhengig kontroll av brann?',
+    question: 'Når utløses kravet om uavhengig kontroll?',
     answer:
-      'Det er krav om UK brann når prosjekteringen av brann utføres i tiltaksklasse 2 (TKL 2) eller høyere, i henhold til SAK10. Dette gjelder de fleste næringsbygg, boligblokker og bygninger med mer enn 2 etasjer.',
+      'Så snart brannprosjekteringen ligger i tiltaksklasse 2 eller høyere, jf. SAK10. I praksis treffer dette de fleste næringsbygg, boligblokker og andre bygninger med mer enn to etasjer.',
   },
   {
-    question: 'Hva koster uavhengig kontroll?',
+    question: 'Hva koster en uavhengig kontroll?',
     answer:
-      'Kostnaden avhenger av prosjektets omfang og kompleksitet. Vi gir fastpristilbud etter gjennomgang av brannkonseptet. Ta kontakt med oss for et uforpliktende estimat.',
+      'Det kommer an på hvor omfattende brannkonseptet er. Send oss det som finnes av dokumentasjon, så gir vi et fastpristilbud etter en rask gjennomgang.',
   },
   {
     question: 'Kan dere ta UK selv om dere ikke har prosjektert brannkonseptet?',
@@ -68,10 +68,11 @@ export default function UavhengigKontrollPage() {
             <div className="w-1 bg-brand-orange rounded-full shrink-0" />
             <div>
               <h1 className="text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-                Uavhengig kontroll av brannkonsept i Harstad
+                Uavhengig kontroll (UK) for byggesaker i Harstad
               </h1>
               <p className="hero-3 text-brand-darkgray text-lg mt-4 max-w-xl leading-relaxed">
-                Krav om UK brann? Vi gjennomgår brannkonseptet og utfører uavhengig kontroll for byggesaker i Harstad og Sør-Troms.
+                Ligger prosjektet i tiltaksklasse 2 eller høyere, må noen andre enn den som prosjekterte
+                kontrollere brannkonseptet. Vi tar den jobben — uavhengig av hvem som har utarbeidet det.
               </p>
             </div>
           </div>
@@ -84,7 +85,9 @@ export default function UavhengigKontrollPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  I mange byggeprosjekter er det krav om uavhengig kontroll (UK) av brannsikkerheten. Kontrollen skal sikre at brannkonseptet er i tråd med gjeldende forskrifter og at prosjekteringen holder nødvendig kvalitet. Dette gir økt trygghet, reduserer risiko for feil og bidrar til en mer forutsigbar byggeprosess.
+                  Uavhengig kontroll er en andre vurdering av brannkonseptet — utført av noen uten
+                  bindinger til den opprinnelige prosjekteringen. Kontrollen fanger opp feil og mangler
+                  før de blir dyre å rette, og er et krav kommunen sjekker før byggetillatelse gis.
                 </p>
               </ScrollReveal>
 
@@ -161,7 +164,7 @@ export default function UavhengigKontrollPage() {
                 <div className="border border-brand-gray rounded-[10px] p-8">
                   <h3 className="font-bold text-brand-black text-xl mb-3">Trenger du UK brann?</h3>
                   <p className="text-brand-darkgray text-sm mb-6 leading-relaxed">
-                    Ta kontakt for uforpliktende tilbud på uavhengig kontroll av brannkonsept i Harstad.
+                    Send oss brannkonseptet, så gir vi deg et fastpristilbud på kontrollen.
                   </p>
                   <Link href="/kontakt-oss" className="block bg-brand-orange text-brand-white font-bold px-6 py-3.5 rounded-[10px] text-center hover:opacity-90 transition-opacity mb-6">
                     Kontakt oss
@@ -199,10 +202,10 @@ export default function UavhengigKontrollPage() {
         <section className="bg-brand-dark py-14 border-t-2 border-brand-orange">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-4">
-              Kontakt oss for uavhengig kontroll i Harstad
+              Trenger prosjektet ditt UK brann?
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
-              Kontakt oss
+              Send oss brannkonseptet
             </Link>
           </div>
         </section>

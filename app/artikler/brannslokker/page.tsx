@@ -7,9 +7,9 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Har du riktig brannslokkeapparat? | Brannkonsult AS',
+  title: 'Riktig brannslokker hjemme og på hytta | Brannkonsult AS',
   description:
-    'Hvilken type brannslokker trenger du? Vi gjennomgår krav til brannslokking i boliger, forskjellen mellom pulver og skum, og riktig bruk. Råd fra Brannkonsult AS.',
+    'Hvilken brannslokker trenger du — og hvorfor betyr det ekstra mye med lang vei til brannvesenet? Krav, apparattyper og riktig bruk. Råd fra Brannkonsult AS.',
   path: '/artikler/brannslokker',
   ogImage: '/images/article-brannslukker.jpg',
 })
@@ -33,7 +33,7 @@ export default function BrannslokkePage() {
             <span>Riktig brannslokker</span>
           </div>
           <h1 className="hero-2 text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-            Har du riktig brannslokkeapparat i boligen?
+            Riktig brannslokker hjemme og på hytta
           </h1>
         </div>
       </section>
@@ -56,46 +56,47 @@ export default function BrannslokkePage() {
             <div className="prose prose-lg max-w-none text-brand-darkgray">
               <ScrollReveal>
                 <p className="text-lg leading-relaxed mb-6">
-                  Visste du at de fleste boligbranner slukkes av beboerne selv — med riktig slokkeutstyr? Korrekt brannslokker på riktig sted kan utgjøre forskjellen mellom en liten ulykke og en katastrofe. I denne artikkelen ser vi nærmere på krav til brannslokking i norske boliger og hvordan du velger riktig apparat.
+                  De fleste boligbranner blir faktisk slukket av beboerne selv, lenge før brannvesenet rekker frem. Det gjelder ekstra mye med spredt bosetting og lang utrykningsvei — enten det er en hytte et stykke utenfor Harstad eller et hus lenger ute i distriktet. Her går vi gjennom hvilket slokkeutstyr du faktisk trenger, og hvordan du bruker det.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hva sier loven?</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hva krever regelverket?</h2>
                 <p className="leading-relaxed mb-6">
-                  Forskrift om brannforebygging stiller krav om at alle boliger skal ha slokkeutstyr som rekker over alle rom. I praksis betyr dette at du trenger minst ett brannslokkeapparat (eller brannslange) som er lett tilgjengelig. Røykvarsler er i tillegg obligatorisk i alle etasjer og utenfor soverom.
+                  Forskrift om brannforebygging krever at boliger har slokkeutstyr som dekker alle rom — i praksis minst ett lett tilgjengelig brannslokkeapparat eller en brannslange. Røykvarsler er et eget krav i tillegg, og skal finnes i alle etasjer og utenfor soverom.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Typer brannslokkeapparater</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hvilket apparat passer hvor?</h2>
                 <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Pulverapparat</h3>
                 <p className="leading-relaxed mb-4">
-                  Pulverapparater er de mest vanlige i norske hjem. De er effektive mot de fleste typer branner (klasse A, B og C) og er rimelige i innkjøp. Ulempen er at pulveret er svært vanskelig å rense opp etter bruk — det kan ødelegge elektronikk og skade overflater. Et pulverapparat på 6 kg er et godt valg for de fleste boliger.
+                  Det vanligste valget i norske hjem, og med god grunn — det slår ned de fleste typer branner (klasse A, B og C) og koster lite. Ulempen er opprydningen etterpå: pulveret trenger seg inn overalt og kan ødelegge elektronikk. Et apparat på 6 kg dekker de fleste boliger og hytter godt.
                 </p>
                 <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Skumapparat</h3>
                 <p className="leading-relaxed mb-4">
-                  Skumapparater (AFFF) er ideelle mot branner i faste stoffer (klasse A) og væsker (klasse B). De er skånsomme mot overflater og etterlater mindre skade enn pulver. Mange foretrekker skumapparater i kjøkken og stue. Pass på at apparatet er egnet for brann i fett/olje dersom du ønsker kjøkkenbeskyttelse.
+                  Skumapparater (AFFF) tar branner i faste stoffer og væsker uten å etterlate samme rot som pulver, og passer derfor godt på kjøkken og i stue. Skal det også dekke fett- eller oljebranner på komfyren, må du sjekke at akkurat det apparatet er godkjent for det.
                 </p>
                 <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">CO₂-apparat</h3>
                 <p className="leading-relaxed mb-6">
-                  CO₂-apparater etterlater ingen rester og er ideelle for elektriske installasjoner og elektronikk. De er imidlertid ikke like effektive mot vanlige branner i faste stoffer. Passer godt i serverrom, laboratorier og arkiver.
+                  Etterlater ingen rester og er godt egnet rundt elektriske installasjoner og elektronikk, men mindre effektivt mot vanlige branner i tre og tekstiler. Mest aktuelt i tekniske rom, kontor eller hjemmekontor med mye utstyr.
                 </p>
                 <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Brannteppe</h3>
                 <p className="leading-relaxed mb-6">
-                  Et brannteppe er enkelt å bruke og effektivt mot mindre branner, særlig kjøkkenbranner i gryte og panne. Heng det på et lett tilgjengelig sted i nærheten av komfyren — men ikke rett over den.
+                  Enkel å bruke og svært effektiv mot mindre kjøkkenbranner i gryte og panne. Heng det synlig nær komfyren — men aldri rett over den, hvor det selv kan bli utsatt for varmen.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
                 <div className="border border-brand-gray rounded-[10px] p-6 mb-8">
-                  <h3 className="font-bold text-brand-black text-lg mb-3">Anbefalt slokkeutstyr for en vanlig bolig</h3>
+                  <h3 className="font-bold text-brand-black text-lg mb-3">Et fornuftig utgangspunkt</h3>
                   <ul className="space-y-2 text-brand-darkgray text-sm list-none pl-0">
                     {[
-                      'Kjøkken: Brannteppe + 6 kg pulver- eller skumapparat',
-                      'Gang/entre: 6 kg pulveraparat (lett tilgjengelig)',
-                      'Garasje (hvis aktuelt): 6 kg pulverapparat',
-                      'Alle etasjer: Røykvarsler',
+                      'Kjøkken: brannteppe + 6 kg pulver- eller skumapparat',
+                      'Gang/entré: 6 kg pulverapparat, lett tilgjengelig på vei ut',
+                      'Garasje eller uthus: eget 6 kg pulverapparat',
+                      'Hytte eller fritidsbolig: samme oppsett som boligen — utrykningstiden er ofte lengre',
+                      'Alle etasjer: røykvarsler',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <span className="text-brand-orange">•</span>
@@ -107,25 +108,25 @@ export default function BrannslokkePage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Slik bruker du brannslokker</h2>
-                <p className="leading-relaxed mb-4">Husk forkortelsen <strong>PASS</strong>:</p>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Bruk riktig teknikk</h2>
+                <p className="leading-relaxed mb-4">Forkortelsen <strong>PASS</strong> er lett å huske under stress:</p>
                 <ol className="space-y-3 mb-8 list-decimal list-inside text-brand-darkgray">
                   <li><strong>P</strong>inn — trekk ut sikringspinnen</li>
-                  <li><strong>A</strong>im — rett dysen mot bunnen av flammen</li>
-                  <li><strong>S</strong>queeze — klem inn håndtaket</li>
-                  <li><strong>S</strong>weep — sveip fra side til side</li>
+                  <li><strong>A</strong>im — rett dysen mot bunnen av flammen, ikke toppen</li>
+                  <li><strong>S</strong>queeze — klem inn håndtaket jevnt</li>
+                  <li><strong>S</strong>weep — sveip fra side til side til flammene er borte</li>
                 </ol>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Vedlikehold og kontroll</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Et apparat du ikke har sjekket, kan du ikke stole på</h2>
                 <p className="leading-relaxed mb-6">
-                  Et brannslokkeapparat som ikke virker er verre enn ingen apparat — det gir deg en falsk trygghet. Kontroller apparatet visuelt minst én gang per år: sjekk at trykkmåleren viser i det grønne feltet, at sikringspinnen er på plass, og at dyse og slange ikke er skadet. Ettersyn og reparasjon bør utføres av godkjent servicefirma hvert femte år.
+                  Et brannslokkeapparat som svikter når det trengs, er verre enn ingen apparat — det gir en falsk trygghet. Ta en visuell sjekk minst én gang i året: trykkmåleren skal vise grønt, sikringspinnen skal sitte på plass, og dyse eller slange skal være uskadet. Hvert femte år bør apparatet gjennom service hos et godkjent firma.
                 </p>
                 <p className="leading-relaxed">
-                  Trenger du hjelp med brannteknisk rådgivning for din eiendom?{' '}
+                  Vurderer du samtidig brannsikkerheten i selve bygget?{' '}
                   <Link href="/kontakt-oss" className="text-brand-orange font-bold hover:underline">
-                    Kontakt Brannkonsult AS
+                    Ta kontakt med Brannkonsult AS
                   </Link>{' '}
                   for en uforpliktende vurdering.
                 </p>
@@ -139,10 +140,10 @@ export default function BrannslokkePage() {
         <section className="bg-brand-dark py-14 border-t-2 border-brand-orange">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl font-black mb-4">
-              Trenger du hjelp med brannsikkerheten?
+              Vil du ha en fagperson til å se på bygget?
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
-              Kontakt oss
+              Ta kontakt
             </Link>
           </div>
         </section>

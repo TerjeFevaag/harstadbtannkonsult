@@ -22,19 +22,19 @@ const faqItems = [
       'Branntilsyn er en kontroll utført av kommunens brann- og redningsetat. Branninspeksjon er en frivillig, grundigere gjennomgang du kan bestille fra en privat brannrådgiver som oss. Vi gir en uavhengig vurdering av byggets brannsikkerhet og konkrete anbefalinger.',
   },
   {
-    question: 'Hvem er ansvarlig for brannsikkerheten i et sameie?',
+    question: 'Hvem har ansvaret for brannsikkerheten i et sameie eller borettslag?',
     answer:
-      'Styret i sameiet er ansvarlig for at fellesarealene oppfyller brannkravene. Beboere er ansvarlige for sine egne enheter. Vi hjelper sameier og borettslag med å kartlegge status og utarbeide en handlingsplan for nødvendige utbedringer.',
+      'Styret svarer for fellesarealene — trapperom, loft, kjeller og tekniske rom — mens den enkelte beboer har ansvaret innenfor egen enhet. Vi hjelper styrer med å kartlegge hvor det svikter og sette opp en plan for hva som bør utbedres først.',
   },
   {
-    question: 'Hva skjer hvis bygget ikke oppfyller kravene?',
+    question: 'Hva skjer om bygget ikke innfrir kravene brannvesenet stiller?',
     answer:
-      'Brannvesenet kan gi pålegg om utbedring med frist. Dersom pålegg ikke etterkommes, kan brannvesenet i ytterste konsekvens stenge bygget. Vi hjelper deg med å forstå pålegget og utarbeide en kostnadseffektiv plan for å lukke avvikene.',
+      'Da får eier normalt et pålegg med frist for utbedring, og i verste fall kan brannvesenet stenge bygget dersom pålegget ignoreres. Vi hjelper deg med å tolke hva pålegget faktisk innebærer og sette opp en plan som lukker avvikene uten unødvendige kostnader.',
   },
   {
-    question: 'Hva koster en branninspeksjon?',
+    question: 'Hva koster en branninspeksjon hos dere?',
     answer:
-      'Kostnaden avhenger av byggets størrelse og kompleksitet. Vi gir et fastpristilbud etter å ha mottatt informasjon om bygget. Ta kontakt for en uforpliktende prat og estimat.',
+      'Det avhenger av byggets størrelse og hvor mye som må gjennomgås. Vi ber om litt informasjon om bygget først, og gir deretter et fastpristilbud — ta kontakt for et uforpliktende estimat.',
   },
   {
     question: 'Gjelder oppgraderingskravet for alle eldre bygninger?',
@@ -73,10 +73,11 @@ export default function BranninspeksjonPage() {
             <div className="w-1 bg-brand-orange rounded-full shrink-0" />
             <div>
               <h1 className="text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-                Branntilsyn og branninspeksjon i Harstad
+                Fått pålegg etter branntilsyn i Harstad?
               </h1>
               <p className="hero-3 text-brand-darkgray text-lg mt-4 max-w-xl leading-relaxed">
-                Fått pålegg etter branntilsyn, eller ønsker du en grundig gjennomgang av byggets brannsikkerhet?
+                Vi hjelper deg med å forstå hva pålegget faktisk krever — eller gir deg en uavhengig
+                gjennomgang av bygget selv om brannvesenet ikke har vært innom.
               </p>
             </div>
           </div>
@@ -89,7 +90,7 @@ export default function BranninspeksjonPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Har kommunen vært på branntilsyn, eller ønsker du å kartlegge brannsikkerheten i en eldre bygning i Harstad? Vi hjelper borettslag, sameier, næringsbygg og eiendomseiere med branninspeksjon og vurdering av byggets brannsikkerhet.
+                  Enten det er kommunens brannvesen som har gitt pålegg, eller du selv ønsker å vite hvor et eldre bygg faktisk står brannteknisk, hjelper vi borettslag, sameier, næringsbygg og private eiere med en grundig branninspeksjon.
                 </p>
               </ScrollReveal>
 
@@ -161,7 +162,7 @@ export default function BranninspeksjonPage() {
                 <div className="border border-brand-gray rounded-[10px] p-8">
                   <h3 className="font-bold text-brand-black text-xl mb-3">Fått pålegg?</h3>
                   <p className="text-brand-darkgray text-sm mb-6 leading-relaxed">
-                    Ta kontakt så hjelper vi deg med tilstandsrapport og handlingsplan for å imøtekomme kravene.
+                    Send oss pålegget, så ser vi på det sammen og setter opp en plan for hva som må gjøres.
                   </p>
                   <Link href="/kontakt-oss" className="block bg-brand-orange text-brand-white font-bold px-6 py-3.5 rounded-[10px] text-center hover:opacity-90 transition-opacity mb-6">
                     Kontakt oss
@@ -199,10 +200,10 @@ export default function BranninspeksjonPage() {
         <section className="bg-brand-dark py-14 border-t-2 border-brand-orange">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-4">
-              Kontakt oss for hjelp etter branntilsyn i Harstad
+              Usikker på hva pålegget faktisk krever?
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
-              Kontakt oss
+              Send oss saken
             </Link>
           </div>
         </section>

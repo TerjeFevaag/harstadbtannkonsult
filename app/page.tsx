@@ -16,7 +16,7 @@ const services = [
     iconImage: '/images/icon-brannkonsept.gif',
     title: 'Brannkonsept',
     description:
-      'Kommunen krever et brannkonsept ved de fleste byggesaker. Vi utarbeider helhetlige brannkonsept som ivaretar brannsikkerheten i ditt prosjekt — fra garasjer til leilighetsbygg.',
+      'De fleste byggesaker i Harstad kommune krever et brannkonsept før søknaden kan behandles. Vi setter opp dokumentasjonen som viser at brannsikkerheten er ivaretatt, enten det gjelder en garasje eller et helt leilighetsbygg.',
     href: '/brannkonsept',
   },
   {
@@ -24,7 +24,7 @@ const services = [
     iconImage: '/images/icon-brannprosjektering.gif',
     title: 'Brannprosjektering',
     description:
-      'Vi sørger for at bygget ditt oppfyller alle krav til brannsikkerhet, og finner praktiske løsninger som sparer både tid og kostnader. Fast pris der det er mulig.',
+      'Vi finner løsninger som oppfyller brannkravene uten å komplisere byggeprosjektet unødvendig — med fastpris så du vet hva det koster før vi starter.',
     href: '/brannprosjektering',
   },
   {
@@ -32,7 +32,7 @@ const services = [
     iconImage: '/images/icon-branntilsyn.png',
     title: 'Branninspeksjon',
     description:
-      'Har du fått pålegg etter branntilsyn, eller ønsker du en grundig gjennomgang av byggets brannsikkerhet? Vi inspiserer hele bygningen og utarbeider tilstandsrapport.',
+      'Fått pålegg fra brannvesenet, eller vil du vite hvor bygget faktisk står brannteknisk? Vi går gjennom bygningen og leverer en rapport du kan bruke til å prioritere utbedringer.',
     href: '/branninspeksjon',
   },
   {
@@ -40,7 +40,7 @@ const services = [
     iconImage: '/images/icon-uavhengig-kontroll.png',
     title: 'Uavhengig kontroll',
     description:
-      'I mange byggeprosjekter er det krav om uavhengig kontroll av brannsikkerheten. Vi sikrer at brannkonseptet er i tråd med gjeldende forskrifter.',
+      'Krever prosjektet uavhengig kontroll av brannkonseptet? Vi kontrollerer at dokumentasjonen holder mål opp mot forskriftene, uavhengig av hvem som har prosjektert.',
     href: '/uavhengig-kontroll',
   },
 ]
@@ -48,18 +48,18 @@ const services = [
 const steps = [
   {
     step: '01',
-    title: 'Kontakt oss',
-    description: 'Send oss en forespørsel med informasjon om ditt prosjekt. Vi svarer innen 24 timer.',
+    title: 'Ta kontakt',
+    description: 'Fortell oss kort om prosjektet — adresse, byggetype og hva du trenger hjelp med.',
   },
   {
     step: '02',
-    title: 'Vi sender tilbud',
-    description: 'Du mottar et fastpristilbud med tydelig leveransebeskrivelse. Ingen overraskelser.',
+    title: 'Du får et tilbud',
+    description: 'Vi regner ut fastpris basert på omfang, og sender skriftlig tilbud innen 24 timer.',
   },
   {
     step: '03',
-    title: 'Vi prosjekterer',
-    description: 'Etter aksept leverer vi komplett brannprosjektering klar for kommunen.',
+    title: 'Vi leverer',
+    description: 'Etter bestilling utarbeider vi dokumentasjonen og leverer den klar til bruk i byggesaken.',
   },
 ]
 
@@ -67,7 +67,7 @@ const stats = [
   { number: '1200+', label: 'Prosjekter gjennomført' },
   { number: 'TKL 1+2', label: 'Sentralt godkjent' },
   { number: 'Fast pris', label: 'Der det er mulig' },
-  { number: 'Hele landet', label: 'Vi tar oppdrag overalt' },
+  { number: 'Nord-Norge', label: 'Og resten av landet ved behov' },
 ]
 
 const reviews = [
@@ -112,24 +112,24 @@ const reviews = [
 
 const faqItems = [
   {
-    question: 'Hva koster brannprosjektering i Harstad?',
+    question: 'Hva koster det å få utarbeidet et brannkonsept i Harstad?',
     answer:
-      'Prisen varierer etter omfang og kompleksitet. Et brannkonsept i tiltaksklasse 2 starter hos oss fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris.',
+      'Det kommer an på hvor stort og komplisert prosjektet er. Som utgangspunkt starter et brannkonsept i tiltaksklasse 2 på rundt 15 000 kr eks. mva., inkludert branntegninger — og du får alltid fastpris før vi setter i gang.',
   },
   {
     question: 'Trenger jeg brannprosjektering for mitt prosjekt?',
     answer:
-      'De fleste byggesaker krever brannprosjektering — tilbygg, bruksendring, ny boenhet, påbygg. Ta kontakt for en gratis vurdering av ditt prosjekt.',
+      'Sannsynligvis, ja. Så snart du søker kommunen om tilbygg, bruksendring, ny boenhet eller påbygg, følger det som regel med krav til brannteknisk dokumentasjon. Send oss noen ord om prosjektet, så sier vi ifra.',
   },
   {
     question: 'Er befaring nødvendig?',
     answer:
-      'For nybygg og enklere saker er det ofte ikke nødvendig. Takket være digitale verktøy og kartdata kan vi i mange tilfeller jobbe uten fysisk befaring.',
+      'Ikke alltid. Ved nybygg og de fleste tilbygg klarer vi oss med tegninger og kartdata. Er bygningen mer komplisert, eller snakker vi om en eldre bygning uten oppdaterte tegninger, avtaler vi en befaring.',
   },
   {
     question: 'Er dere sentralt godkjent?',
     answer:
-      'Ja, vi har sentral godkjenning for brannprosjektering i tiltaksklasse 1 og 2. Dette er en garanti for at vi er seriøse, godt forsikret og har dokumenterte referanseprosjekter.',
+      'Ja. Vi har sentral godkjenning fra DiBK for brannprosjektering i tiltaksklasse 1 og 2 — dokumentasjon på at vi har kompetansen, forsikringen og kvalitetssystemet som kreves for å ta ansvarsrett i byggesaken.',
   },
   {
     question: 'Tar dere oppdrag utenfor Harstad?',
@@ -142,23 +142,23 @@ const articles = [
   {
     href: '/artikler/pipebrann',
     image: '/images/article-pipebrann.jpg',
-    title: 'Forebygg pipebrann med enkle grep',
+    title: 'Pipebrann om vinteren — slik unngår du det',
     excerpt:
-      'Er du i faresonen for å kunne få brann i skorsteinen? Les om hva som forårsaker pipebrann og enkle tiltak for å redusere risikoen.',
+      'Lange fyringssesonger i Nord-Norge betyr høyere risiko for pipebrann. Les hvordan riktig ved, fyring og feiing reduserer faren.',
   },
   {
     href: '/artikler/brannslokker',
     image: '/images/article-brannslukker.jpg',
-    title: 'Har du riktig brannslokkeapparat?',
+    title: 'Riktig brannslokker hjemme og på hytta',
     excerpt:
-      'Vet du hvilken type brannslokker du trenger i hjemmet? Vi gjennomgår krav og forskjellen mellom pulver- og skumapparater.',
+      'Med lang vei til brannvesenet betyr riktig slokkeutstyr ekstra mye. Vi gjennomgår hva du faktisk trenger, hjemme og på hytta.',
   },
   {
     href: '/artikler/roykvarsler',
     image: '/images/article-roykvarsler.jpg',
-    title: 'Riktig røykvarsler redder liv',
+    title: 'Røykvarsler og mørketid i Nord-Norge',
     excerpt:
-      'Er du godt nok sikret hvis det oppstår brann om natten? Vi forklarer krav til røykvarslere og riktig plassering.',
+      'I mørketiden brenner vi mer stearinlys enn ellers. Vi forklarer krav til røykvarslere, riktig type og plassering.',
   },
 ]
 
@@ -178,11 +178,12 @@ export default function HomePage() {
                   Brannkonsult AS — Sør-Troms
                 </p>
                 <h1 className="hero-3 text-brand-white text-4xl lg:text-5xl font-black leading-tight mb-6">
-                  Vi hjelper deg med brannprosjektering i Harstad og Sør-Troms
+                  Brannprosjektering tilpasset Harstads bygningsmasse
                 </h1>
                 <p className="hero-4 text-brand-white/70 text-base lg:text-lg leading-relaxed mb-8">
-                  Sentralt godkjent foretak med over 1200 gjennomførte prosjekter. Fast pris, rask
-                  levering og personlig oppfølging — fra enkle tilbygg til store leilighetsbygg.
+                  Fra trehusbebyggelsen ved havna til moderne leilighetsbygg og næringsbygg — vi kjenner
+                  kravene som gjelder for byggeprosjekter i Harstad og Sør-Troms. Sentralt godkjent
+                  foretak med over 1200 gjennomførte prosjekter og alltid fastpris.
                 </p>
                 <div className="hero-5 flex flex-wrap gap-4 mb-8">
                   <Link
@@ -231,9 +232,9 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-brand-lightgray">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="mb-12">
-            <p className="font-mono text-brand-orange text-xs uppercase tracking-[0.25em] mb-2">Våre tjenester</p>
+            <p className="font-mono text-brand-orange text-xs uppercase tracking-[0.25em] mb-2">Hva vi gjør</p>
             <h2 className="text-brand-black text-3xl lg:text-4xl font-black">
-              Hva kan vi hjelpe deg med?
+              Fire tjenester, ett kontaktpunkt
             </h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -246,12 +247,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ── */}
+      {/* ── LOKALKUNNSKAP ── */}
       <section className="py-16 lg:py-24 bg-brand-white">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal className="max-w-3xl">
+            <p className="font-mono text-brand-orange text-xs uppercase tracking-[0.25em] mb-2">Lokalkunnskap</p>
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black mb-5">
+              Bygningsmassen i Harstad stiller egne krav
+            </h2>
+            <p className="text-brand-darkgray leading-relaxed">
+              Harstad sentrum har mye av sin opprinnelige trehusbebyggelse bevart, klemt inn mellom
+              havna og fjellsidene — en bygningsmasse med antikvarisk preg som stiller andre krav til
+              branntekniske løsninger enn nybygg. Samtidig vokser byen med nye leilighetsbygg,
+              næringsbygg og anlegg knyttet til offshore- og verftsvirksomheten. Vi har prosjektert
+              brannsikkerhet i begge typer bygg — fra tilbygg på gamle trehus til nye næringsbygg — og
+              kjenner forskjellen på hva som kreves.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS ── */}
+      <section className="py-16 lg:py-24 bg-brand-lightgray">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
-            <p className="font-mono text-brand-orange text-xs uppercase tracking-[0.25em] mb-2">Enkel prosess</p>
-            <h2 className="text-brand-black text-3xl lg:text-4xl font-black">Slik jobber vi</h2>
+            <p className="font-mono text-brand-orange text-xs uppercase tracking-[0.25em] mb-2">Fremdrift</p>
+            <h2 className="text-brand-black text-3xl lg:text-4xl font-black">Fra henvendelse til ferdig dokumentasjon</h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {steps.map((s, i) => (
@@ -369,11 +390,11 @@ export default function HomePage() {
       <section className="bg-brand-dark py-16 lg:py-20 border-t-2 border-brand-orange">
         <ScrollReveal variant="fade" className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-brand-white text-3xl lg:text-4xl font-black mb-4">
-            Klar for å komme i gang?
+            Har du et byggeprosjekt i Harstad?
           </h2>
           <p className="text-brand-white/70 text-lg mb-8 max-w-xl mx-auto">
-            Ta kontakt i dag for et uforpliktende tilbud på brannprosjektering i Harstad.
-            Vi svarer innen 24 timer.
+            Send oss noen ord om hva du trenger, så har du et fastprisforslag i hånden
+            innen 24 timer.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link

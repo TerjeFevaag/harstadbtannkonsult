@@ -15,11 +15,11 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const process = [
-  { step: '1', title: 'Kontakt oss', desc: 'Send forespørsel med informasjon om prosjektet.' },
-  { step: '2', title: 'Vi sender tilbud', desc: 'Du mottar fastpristilbud innen 24 timer.' },
-  { step: '3', title: 'Du aksepterer', desc: 'Bekreft oppdraget — vi starter arbeidet.' },
-  { step: '4', title: 'Vi prosjekterer', desc: 'Erfarne brannrådgivere utarbeider dokumentasjonen.' },
-  { step: '5', title: 'Dokumentasjon levert', desc: 'Komplett leveranse klar for kommunen.' },
+  { step: '1', title: 'Du tar kontakt', desc: 'Fortell oss om adressen, byggetypen og hva saken gjelder.' },
+  { step: '2', title: 'Vi regner ut fastpris', desc: 'Skriftlig tilbud i hånden innen 24 timer — ingen timepris.' },
+  { step: '3', title: 'Du bestiller', desc: 'Bekreft oppdraget, så setter vi i gang.' },
+  { step: '4', title: 'Vi jobber med saken', desc: 'Brannrådgiverne våre utarbeider dokumentasjonen din.' },
+  { step: '5', title: 'Du får leveransen', desc: 'Ferdig dokumentasjon, klar til bruk i byggesaken.' },
 ]
 
 export default function OmOssPage() {

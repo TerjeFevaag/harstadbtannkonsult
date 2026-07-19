@@ -17,29 +17,29 @@ export const metadata: Metadata = buildMetadata({
 
 const faqItems = [
   {
-    question: 'Hva koster brannprosjektering i Harstad?',
+    question: 'Hva koster brannprosjektering?',
     answer:
-      'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris. Send oss tegninger og prosjektbeskrivelse for et nøyaktig tilbud.',
+      'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger, og prisen er alltid fast — ingen timepris som løper. Send oss tegninger og en kort prosjektbeskrivelse, så regner vi ut et nøyaktig tilbud.',
   },
   {
-    question: 'Trenger jeg brannprosjektering for tilbygg eller bruksendring?',
+    question: 'Må jeg ha brannprosjektering for et tilbygg eller en bruksendring?',
     answer:
-      'Ja, de fleste tiltak som krever søknad til kommunen utløser også krav om brannprosjektering — dette gjelder tilbygg, påbygg, bruksendring, ny boenhet i eksisterende bygg og bytte av vinduer i brannvegg. Ta kontakt for en gratis vurdering.',
+      'I de aller fleste tilfeller, ja. Alt som krever søknad til kommunen — tilbygg, påbygg, bruksendring, ny boenhet i et eksisterende hus eller bytte av vinduer i en brannvegg — utløser normalt krav om brannteknisk dokumentasjon. Usikker på ditt tilfelle? Bare spør.',
   },
   {
-    question: 'Er befaring nødvendig?',
+    question: 'Trenger dere å komme og se på bygget?',
     answer:
-      'I de fleste saker er befaring ikke nødvendig. Med digitale kartdata, tegningsunderlag og bilder kan vi utarbeide god brannprosjektering uten å besøke bygget. Vi gir beskjed hvis vi ser behov for befaring.',
+      'Sjelden. Med kartdata, tegningsunderlag og noen bilder kommer vi som regel i mål uten fysisk befaring. Dukker det opp noe vi trenger å se med egne øyne, avtaler vi det underveis.',
   },
   {
-    question: 'Tilbyr dere håndverkertjenester?',
+    question: 'Har dere egne håndverkere eller produkter dere anbefaler?',
     answer:
-      'Nei — vi er en nøytral brannrådgiver og selger ingen produkter eller håndverkertjenester. Dette sikrer at rådgivningen alltid er i ditt beste interesse.',
+      'Nei. Vi lever av rådgivningen alene, ikke av å selge tjenester eller produkter videre — det er det som gjør at anbefalingene våre er upåvirket av hva som lønner seg for oss.',
   },
   {
-    question: 'Hva trengs fra deg for å gi et pristilbud?',
+    question: 'Hva må jeg sende for å få et fastpristilbud?',
     answer:
-      'Vi trenger adresse, antall etasjer og bruksareal, plantegninger og en kort prosjektbeskrivelse. Jo mer informasjon vi får, jo mer presist kan vi prise oppdraget. Send det til oss på e-post eller via kontaktskjemaet.',
+      'Adresse, plantegninger og en kort beskrivelse av hva som skal gjøres er nok til å komme i gang. Jo mer vi får, jo mer presist blir tilbudet — send det på e-post eller via skjemaet under.',
   },
   {
     question: 'Tilbyr dere brannprosjektering utenfor Harstad?',
@@ -73,10 +73,11 @@ export default function BrannprosjekteringPage() {
             <div className="w-1 bg-brand-orange rounded-full shrink-0" />
             <div>
               <h1 className="text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-                Brannprosjektering i Harstad
+                Brannprosjektering for byggeprosjekter i Harstad
               </h1>
               <p className="hero-3 text-brand-darkgray text-lg mt-4 max-w-xl leading-relaxed">
-                Vi sørger for at bygget ditt oppfyller alle krav til brannsikkerhet — til fast pris og med rask levering.
+                Enten det gjelder et nybygg på Stangnes eller et tilbygg til et eldre hus i sentrum —
+                vi finner brannløsningen som holder i byggesaken, til fastpris.
               </p>
             </div>
           </div>
@@ -89,7 +90,7 @@ export default function BrannprosjekteringPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Brannprosjektering betyr skriftlig planlegging av nødvendig brannsikring i og rundt bygningen. Vi sørger for at ditt bygg i Harstad oppfyller alle krav i plan- og bygningsloven og brann- og eksplosjonsvernloven — til fast pris.
+                  Brannprosjektering er det skriftlige grunnlaget som viser hvordan bygget ditt oppfyller kravene i plan- og bygningsloven og brann- og eksplosjonsvernloven. Vi utarbeider dette til fastpris, uansett om det er snakk om et nybygg, en ombygging av et eldre hus, eller en næringseiendom i et av industriområdene rundt Harstad.
                 </p>
               </ScrollReveal>
 
@@ -220,10 +221,10 @@ export default function BrannprosjekteringPage() {
         <section className="bg-brand-dark py-14 border-t-2 border-brand-orange">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-4">
-              Be om tilbud på brannprosjektering i Harstad
+              Skal du i gang med et byggeprosjekt?
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
-              Få tilbud nå
+              Få tilbud på brannprosjektering
             </Link>
           </div>
         </section>

@@ -18,23 +18,23 @@ const articles = [
   {
     href: '/artikler/pipebrann',
     image: '/images/article-pipebrann.jpg',
-    title: 'Forebygg pipebrann med enkle grep',
+    title: 'Pipebrann om vinteren — slik unngår du det',
     excerpt:
-      'Er du i faresonen for å kunne få brann i skorsteinen? Les om hva som forårsaker pipebrann og enkle tiltak for å redusere risikoen.',
+      'Lange fyringssesonger i Nord-Norge betyr høyere risiko for pipebrann. Les hvordan riktig ved, fyring og feiing reduserer faren.',
   },
   {
     href: '/artikler/brannslokker',
     image: '/images/article-brannslukker.jpg',
-    title: 'Har du riktig brannslokkeapparat?',
+    title: 'Riktig brannslokker hjemme og på hytta',
     excerpt:
-      'Vet du hvilken type brannslokker du trenger i hjemmet? Vi gjennomgår krav og forskjellen mellom pulver- og skumapparater.',
+      'Med lang vei til brannvesenet betyr riktig slokkeutstyr ekstra mye. Vi gjennomgår hva du faktisk trenger, hjemme og på hytta.',
   },
   {
     href: '/artikler/roykvarsler',
     image: '/images/article-roykvarsler.jpg',
-    title: 'Riktig røykvarsler redder liv',
+    title: 'Røykvarsler og mørketid i Nord-Norge',
     excerpt:
-      'Er du godt nok sikret hvis det oppstår brann om natten? Vi forklarer krav til røykvarslere og riktig plassering.',
+      'I mørketiden brenner vi mer stearinlys enn ellers. Vi forklarer krav til røykvarslere, riktig type og plassering.',
   },
 ]
 

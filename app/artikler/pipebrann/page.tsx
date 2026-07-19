@@ -7,9 +7,9 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Forebygg pipebrann med enkle grep | Brannkonsult AS',
+  title: 'Pipebrann om vinteren — slik unngår du det | Brannkonsult AS',
   description:
-    'Lær hvordan du forebygger pipebrann. Regelmessig feieservice, riktig ved og god trekk er nøkkelen. Råd fra sentralt godkjente brannrådgivere i Harstad.',
+    'Lange fyringssesonger i Nord-Norge øker risikoen for pipebrann. Råd om ved, fyring og feiing fra sentralt godkjente brannrådgivere i Harstad.',
   path: '/artikler/pipebrann',
   ogImage: '/images/article-pipebrann.jpg',
 })
@@ -33,7 +33,7 @@ export default function PipebrannPage() {
             <span>Forebygg pipebrann</span>
           </div>
           <h1 className="hero-2 text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-            Forebygg pipebrann med enkle grep
+            Pipebrann om vinteren — slik unngår du det
           </h1>
         </div>
       </section>
@@ -56,30 +56,29 @@ export default function PipebrannPage() {
             <div className="prose prose-lg max-w-none text-brand-darkgray">
               <ScrollReveal>
                 <p className="text-lg leading-relaxed mb-6">
-                  Er du i faresonen for å kunne få brann i skorsteinen? Hvert år oppstår det dessverre mange pipebranner i Norge, og de fleste av dem kunne vært unngått med enkle forebyggende tiltak. I denne artikkelen forklarer vi hva en pipebrann er, hva som forårsaker den, og hva du kan gjøre for å redusere risikoen.
+                  Med lange, kalde vintre og korte dager er vedfyring den vanligste oppvarmingskilden i mange hjem i Harstad og resten av Nord-Norge — noen ganger fra tidlig oktober til langt ut i mai. Det betyr også flere timer med ovnen i gang, og dermed større risiko for pipebrann enn i landsdeler med kortere fyringssesong. Gode vaner koster ingenting og reduserer risikoen betydelig.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hva er en pipebrann?</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hva er det egentlig som brenner?</h2>
                 <p className="leading-relaxed mb-6">
-                  En pipebrann oppstår når beksot (kreosot) — et svart, tjæreaktig stoff som samler seg på innsiden av skorsteinen — antennes. Beksot er et biprodukt av ufullstendig forbrenning og dannes særlig ved bruk av fuktig ved, lav temperatur i ildstedet eller dårlig trekk i pipa. Når beksotlaget blir tykt nok og temperaturen stiger, kan det ta fyr.
+                  Det er ikke pipa selv som tar fyr, men beksoten (kreosoten) som legger seg på innsiden av den — et svart, tjæreaktig belegg som dannes når veden ikke forbrenner fullstendig. Fuktig ved, lav temperatur i ildstedet og dårlig trekk gir mer beksot. Blir laget tykt nok, og temperaturen i pipa stiger, kan det antennes.
                 </p>
                 <p className="leading-relaxed mb-6">
-                  En pipebrann er svært varm — temperaturen i skorsteinen kan overstige 1000 grader — og kan raskt spre seg til omliggende konstruksjoner. Selv om mange pipebranner slukner av seg selv, er faren for at brannen sprer seg til resten av huset overhengende.
+                  En pipebrann er ekstremt varm — over 1000 grader er ikke uvanlig — og kan spre seg til bjelkelag og takkonstruksjon på minutter. Noen pipebranner slukner av seg selv, men risikoen for spredning til resten av huset er reell nok til at det aldri bør ignoreres.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hva forårsaker pipebrann?</h2>
-                <p className="leading-relaxed mb-4">De vanligste årsakene til pipebrann er:</p>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hva øker risikoen?</h2>
                 <ul className="space-y-3 mb-6 list-none pl-0">
                   {[
-                    'Bruk av fuktig eller useasongert ved — dette gir røykere og kaldere forbrenning',
-                    'For lav temperatur i ovnen — pyroteknisk forbrenning produserer mer beksot',
-                    'Mangelfull feieservice — beksot og sot hoper seg opp over tid',
-                    'Gamle eller skadede skorsteiner med sprekker',
-                    'Feil type brensel (f.eks. behandlet tre, hageavfall, plast)',
+                    'Fuktig eller useasongert ved — gir røykere, kaldere forbrenning og mer beksot',
+                    'Lang, ulmende fyring på lavt bluss for å spare ved',
+                    'Sjelden feiing, slik at beksot og sot bygger seg opp over flere sesonger',
+                    'Gamle skorsteiner med sprekker eller skader i pipeløpet',
+                    'Feil brensel — behandlet trevirke, hageavfall eller plast produserer mer sot enn ren ved',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <span className="text-brand-orange mt-1">•</span>
@@ -90,45 +89,41 @@ export default function PipebrannPage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Slik forebygger du pipebrann</h2>
-                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">1. Bruk tørr ved</h3>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Fire vaner som faktisk hjelper</h2>
+                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Kjøp ved tidlig, og la den tørke lenge</h3>
                 <p className="leading-relaxed mb-6">
-                  Bruk alltid tørr, sesongert ved med under 20% fuktinnhold. Fuktig ved gir dårligere forbrenning, mer røyk og langt mer beksotavleiring. Kjøp ved i god tid og la det tørke minst ett år under tak med god luftsirkulasjon.
+                  Sesongert ved med under 20 % fuktinnhold gir langt renere forbrenning enn fersk ved. Kjøp gjerne inn til neste vinter allerede nå, og lagre den under tak med luft på alle sider — minst ett år er en fornuftig tommelfingerregel i et klima med korte, fuktige somre.
                 </p>
-                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">2. Fyr riktig</h3>
+                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Fyr varmt, ikke svakt</h3>
                 <p className="leading-relaxed mb-6">
-                  Fyr med høy temperatur og god lufttilgang, særlig ved opptenning. Unngå å dempe ned ilden for mye — langsom, ulmende ild gir mye beksot. En god tommelfingerregel er å alltid ha synlige flammer i ovnen.
+                  Et bål med synlige flammer og god lufttilgang produserer vesentlig mindre beksot enn en ovn som ulmer på lavt bluss over lang tid. Det er fristende å dempe ned for å strekke veden, men det er nettopp den slags fyring som bygger opp mest belegg i pipa.
                 </p>
-                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">3. Regelmessig feieservice</h3>
+                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Bestill feiing — og ikke skyv på den</h3>
                 <p className="leading-relaxed mb-6">
-                  Brannloven krever at alle ildsteder og skorsteiner i boligbygg feies og kontrolleres jevnlig av kommunens feietjeneste. Sørg for at du er registrert hos din kommune og at du ikke hindrer adkomst til skorsteinen. Dersom du fyrer mye, kan det være aktuelt med hyppigere feieservice enn det kommunen tilbyr.
+                  Brannloven krever at ildsteder og skorsteiner feies og kontrolleres jevnlig av kommunens feietjeneste. Fyrer du mye i vintersesongen, kan det være grunn til å be om hyppigere feiing enn det kommunen legger opp til som standard — særlig i eldre pipeløp.
                 </p>
-                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">4. Kontroller pipa jevnlig</h3>
-                <p className="leading-relaxed mb-6">
-                  Sjekk at det ikke er sprekker eller skader i pipa, verken innvendig eller utvendig. Legg merke til om det lukter røyk i huset — dette kan indikere sprekker i røykkanalen. Ta kontakt med en fagperson dersom du er i tvil om tilstanden på pipa di.
-                </p>
-                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">5. Monter røykvarsler</h3>
+                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Se etter tegn på skade</h3>
                 <p className="leading-relaxed mb-8">
-                  Norsk lov krever at alle boliger har røykvarsler. Sørg for at du har røykvarslere i alle etasjer og utenfor soverom. Test dem jevnlig og bytt batteri én gang i året.
+                  Sprekker i pipeløpet, lukt av røyk inne i huset utenom fyring, eller synlig skade utvendig er alle tegn på at pipa bør sjekkes av en fagperson før neste fyringssesong.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
                 <div className="border border-brand-gray rounded-[10px] p-6 mb-8">
-                  <h3 className="font-bold text-brand-black text-lg mb-2">Hva gjør du hvis det begynner å brenne i pipa?</h3>
+                  <h3 className="font-bold text-brand-black text-lg mb-2">Det tar fyr i pipa — hva gjør du?</h3>
                   <ol className="space-y-2 text-brand-darkgray text-sm list-decimal list-inside">
-                    <li>Ring brannvesenet (110) umiddelbart</li>
-                    <li>Lukk trekkspjeldet og alle luftventiler på ovnen</li>
-                    <li>Evakuer huset</li>
-                    <li>Hold øye med pipa utenfra — sjekk om det er gnister</li>
-                    <li>Ikke forsøk å slukke pipebrann selv med vann</li>
+                    <li>Ring 110 med én gang</li>
+                    <li>Steng trekkspjeldet og alle luftventiler på ovnen</li>
+                    <li>Få alle ut av huset</li>
+                    <li>Følg med på pipa utenfra — se etter gnister eller flammer ut av toppen</li>
+                    <li>Aldri hell vann i en varm pipe — det kan sprenge den</li>
                   </ol>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal>
                 <p className="leading-relaxed">
-                  Har du spørsmål om brannsikkerhet i din bolig eller ditt bygg? Brannkonsult AS er sentralt godkjente brannrådgivere og hjelper deg gjerne med brannkonsept, brannprosjektering og branninspeksjon.{' '}
+                  Vurderer du samtidig brannsikkerheten i resten av bygget — enten det er en enebolig eller et bygg med flere boenheter? Brannkonsult AS er sentralt godkjente brannrådgivere og bistår med brannkonsept, brannprosjektering og branninspeksjon i Harstad og resten av Nord-Norge.{' '}
                   <Link href="/kontakt-oss" className="text-brand-orange font-bold hover:underline">
                     Ta kontakt med oss her.
                   </Link>
@@ -143,10 +138,10 @@ export default function PipebrannPage() {
         <section className="bg-brand-dark py-14 border-t-2 border-brand-orange">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl font-black mb-4">
-              Trenger du hjelp med brannsikkerheten?
+              Lurer du på brannsikkerheten i bygget ditt?
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
-              Kontakt oss
+              Ta kontakt
             </Link>
           </div>
         </section>

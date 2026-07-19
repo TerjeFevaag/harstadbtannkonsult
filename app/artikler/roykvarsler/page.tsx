@@ -7,9 +7,9 @@ import { buildMetadata } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Riktig røykvarsler redder liv | Brannkonsult AS',
+  title: 'Røykvarsler og mørketid i Nord-Norge | Brannkonsult AS',
   description:
-    'Krav til røykvarslere i norske boliger, forskjell mellom ionisasjon og optisk varsler, og anbefalt plassering. Råd fra sentralt godkjente brannrådgivere i Harstad.',
+    'I mørketiden brenner flere lys og stearinlys enn ellers i året. Krav til røykvarslere, riktig type og plassering. Råd fra sentralt godkjente brannrådgivere i Harstad.',
   path: '/artikler/roykvarsler',
   ogImage: '/images/article-roykvarsler.jpg',
 })
@@ -33,7 +33,7 @@ export default function RoykVarslerPage() {
             <span>Riktig røykvarsler</span>
           </div>
           <h1 className="hero-2 text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-            Riktig røykvarsler redder liv
+            Røykvarsler og mørketid i Nord-Norge
           </h1>
         </div>
       </section>
@@ -56,52 +56,51 @@ export default function RoykVarslerPage() {
             <div className="prose prose-lg max-w-none text-brand-darkgray">
               <ScrollReveal>
                 <p className="text-lg leading-relaxed mb-6">
-                  Er du godt nok sikret hvis det oppstår en brann om natten? De fleste dødsbranner skjer mens beboerne sover, og uten røykvarsler som vekker deg i tide kan konsekvensene bli fatale. En god røykvarsler gir deg verdifull tid til å evakuere. Men ikke alle røykvarslere er like — og riktig plassering er avgjørende.
+                  Fra førjulstiden og et godt stykke ut i januar er det knapt lyst i Harstad. I mørketiden kompenserer de fleste av oss med flere lys i vinduene og mer stearinlys enn ellers i året — og det er nettopp den kombinasjonen av levende lys og lange, mørke kvelder som gjør en fungerende røykvarsler ekstra viktig. De fleste dødsbranner skjer om natten mens folk sover, og varsleren er ofte det eneste som gir deg tid nok til å komme deg ut.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Lovkrav til røykvarslere i Norge</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hva krever regelverket?</h2>
                 <p className="leading-relaxed mb-6">
-                  Forskrift om brannforebygging krever at alle boliger skal ha minst én røykvarsler per etasje, og at det skal være røykvarsler utenfor soverom. I praksis betyr dette at du bør ha røykvarsler i alle rom der det er naturlig opphold, samt i korridorer og trapper.
+                  Forskrift om brannforebygging krever minst én røykvarsler per etasje, i tillegg til én utenfor hvert soverom. I praksis bør du ha varsler i alle rom med naturlig opphold, samt i korridorer og trapper.
                 </p>
                 <p className="leading-relaxed mb-6">
-                  Røykvarsleren skal varsle med lydsignal på minimum 85 dB(A) ved soveromsdøren. Alarmen skal være sterk nok til å vekke en sovende person.
+                  Lydsignalet skal være på minst 85 dB(A) målt ved soveromsdøren — sterkt nok til å vekke noen som sover tungt.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Ionisasjon vs. optisk røykvarsler</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">To typer, én klar anbefaling</h2>
                 <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Ionisasjonsvarsler</h3>
                 <p className="leading-relaxed mb-6">
-                  Ionisasjonsvarslere bruker en liten mengde radioaktivt materiale for å registrere røykpartikler. De er svært raskest til å oppdage hurtigbrennende branner med lite synlig røyk, men kan gi falske alarmer fra matlaging og damp. De er vanligst i eldre boliger, men anbefales ikke lenger av norske myndigheter.
+                  Bruker en liten mengde radioaktivt materiale til å oppdage røykpartikler, og reagerer raskt på flammebranner med lite synlig røyk. Ulempen er hyppige falske alarmer fra matos og damp — derfor er denne typen ikke lenger det norske myndigheter anbefaler, selv om den fortsatt finnes i mange eldre boliger.
                 </p>
-                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Optisk (fotoelektrisk) røykvarsler</h3>
+                <h3 className="text-brand-black text-xl font-bold mb-3 mt-6">Optisk (fotoelektrisk) varsler</h3>
                 <p className="leading-relaxed mb-6">
-                  Optiske røykvarslere bruker lysstråler for å oppdage røykpartikler. De er bedre til å oppdage ulmebranner — den vanligste typen boligbrann — som produserer mye tykk røyk. Optiske varslere gir færre falske alarmer fra matlaging. Disse anbefales av Direktoratet for samfunnssikkerhet og beredskap (DSB).
+                  Bruker lysstråler til å oppdage røykpartikler, og er vesentlig bedre på ulmebranner — den klart vanligste typen boligbrann, og den som ofte oppstår fra et stearinlys som velter eller glemmes. Færre falske alarmer fra matlaging gjør den også mer praktisk i hverdagen. Dette er typen Direktoratet for samfunnssikkerhet og beredskap (DSB) anbefaler.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal>
                 <div className="border border-brand-gray rounded-[10px] p-6 mb-8">
-                  <h3 className="font-bold text-brand-black text-lg mb-3">Anbefaling fra Brannkonsult AS</h3>
+                  <h3 className="font-bold text-brand-black text-lg mb-3">Vår anbefaling</h3>
                   <p className="text-brand-darkgray text-sm leading-relaxed">
-                    Velg optiske røykvarslere for boliger. De oppdager ulmebranner — den vanligste typen — raskere og gir færre falske alarmer. Sørg for at alle varslere er koblet sammen (radio- eller kabelforbundet) slik at alle alarmer går av samtidig.
+                    Velg optiske røykvarslere, og koble dem sammen — via kabel eller radio — slik at alle utløses samtidig uansett hvor i boligen de henger. Det er den kombinasjonen som gir deg mest tid når det gjelder.
                   </p>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Riktig plassering av røykvarsler</h2>
-                <p className="leading-relaxed mb-4">Røykvarsler bør plasseres:</p>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Hvor bør varsleren henge?</h2>
                 <ul className="space-y-3 mb-6 list-none pl-0">
                   {[
                     'I taket, minst 50 cm fra vegger og hjørner',
-                    'Utenfor hvert soverom (i gangen utenfor)',
-                    'I alle etasjer inkl. kjeller',
-                    'I stue og oppholdsrom',
-                    'Ikke direkte på kjøkken — røyk fra matlaging gir falsk alarm (bruk varme-/komfyrvakt i stedet)',
-                    'Ikke i fuktige bad eller garasje',
+                    'Utenfor hvert soverom, i gangen',
+                    'I alle etasjer, inkludert kjeller',
+                    'I stue og andre oppholdsrom',
+                    'Ikke rett over komfyren — bruk komfyrvakt der i stedet, ellers får du stadige falske alarmer',
+                    'Ikke i fuktige rom som bad, eller i garasjen',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-brand-darkgray">
                       <span className="text-brand-orange mt-1">•</span>
@@ -112,19 +111,12 @@ export default function RoykVarslerPage() {
               </ScrollReveal>
 
               <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Vedlikehold og batteriskift</h2>
+                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Test den før mørketiden, ikke etterpå</h2>
                 <p className="leading-relaxed mb-6">
-                  Test røykvarsleren minst én gang per måned ved å trykke på testknappen. Bytt batteri én gang i året — en god huskeregel er å gjøre det når klokkene skrus tilbake om høsten. De fleste varslere har en levetid på 8–10 år — etter dette bør de byttes selv om de fortsatt fungerer.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal>
-                <h2 className="text-brand-black text-2xl font-black mb-4 mt-10">Koblet system — den beste løsningen</h2>
-                <p className="leading-relaxed mb-6">
-                  Dersom én røykvarsler oppdager røyk, er det avgjørende at alle varslerne i huset aktiveres. Et koblet system — enten via kabel eller trådløst — sikrer at hele familien varsles uavhengig av hvor i huset brannen oppstår. Dette er spesielt viktig i store boliger og fleretasjesbygg.
+                  Trykk testknappen minst én gang i måneden, og bytt batteri én gang i året — gjerne når klokka stilles tilbake i oktober, før den mørkeste og mest lysavhengige delen av året. De fleste varslere har en levetid på 8–10 år og bør byttes ut selv om de fremdeles piper når du tester dem.
                 </p>
                 <p className="leading-relaxed">
-                  Trenger du brannteknisk vurdering av en eiendom i Harstad?{' '}
+                  Vurderer du brannsikkerheten i en eiendom i Harstad, enten det er en enkelt bolig eller et bygg med flere enheter?{' '}
                   <Link href="/kontakt-oss" className="text-brand-orange font-bold hover:underline">
                     Ta kontakt med Brannkonsult AS
                   </Link>{' '}
@@ -140,10 +132,10 @@ export default function RoykVarslerPage() {
         <section className="bg-brand-dark py-14 border-t-2 border-brand-orange">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl font-black mb-4">
-              Trenger du hjelp med brannsikkerheten?
+              Skal bygget ditt brannvurderes?
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
-              Kontakt oss
+              Ta kontakt
             </Link>
           </div>
         </section>

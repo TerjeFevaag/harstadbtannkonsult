@@ -17,34 +17,34 @@ export const metadata: Metadata = buildMetadata({
 
 const faqItems = [
   {
-    question: 'Hva trenger jeg til mitt prosjekt — brannkonsept eller brannteknisk notat?',
+    question: 'Trenger jeg et fullt brannkonsept, eller holder det med et enklere notat?',
     answer:
-      'Et brannkonsept er en mer helhetlig rapport som beskriver brannsikkerhetsnivået til hele byggverket. Et brannteknisk notat er enklere og brukes for mindre tiltak. Vi veileder deg til riktig løsning for ditt prosjekt — ta kontakt for en gratis vurdering.',
+      'Det kommer an på hvor omfattende tiltaket er. Et brannkonsept dekker brannsikkerheten til hele byggverket, mens et brannteknisk notat er tilstrekkelig for mindre endringer. Send oss noen linjer om prosjektet, så sier vi hva som faktisk kreves før du bestiller noe.',
   },
   {
-    question: 'Er befaring nødvendig for brannkonsept?',
+    question: 'Må dere befare bygget for å lage et brannkonsept?',
     answer:
-      'For nybygg og enklere saker er det sjelden nødvendig med befaring. Takket være digitale kartdata og gode tegningsunderlag kan vi i mange tilfeller utarbeide brannkonseptet uten fysisk befaring. Vi gir beskjed dersom vi ser behov for det.',
+      'Sjelden, i praksis. Med gode tegninger og digitale kartdata klarer vi de fleste nybygg og enklere tiltak uten befaring. Er bygget uoversiktlig, eller mangler det oppdaterte tegninger, sier vi ifra i forkant — det er i så fall inkludert i tilbudet.',
   },
   {
-    question: 'Hva koster et brannkonsept i Harstad?',
+    question: 'Hva koster et brannkonsept?',
     answer:
-      'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger. Vi tilbyr alltid fastpris slik at du slipper ubehagelige overraskelser. Send oss informasjon om prosjektet for et nøyaktig tilbud.',
+      'Et brannkonsept i tiltaksklasse 2 starter fra ca. 15 000 kr ekskl. mva., inkludert branntegninger, og du får alltid fastpris skriftlig før vi begynner. Send oss adresse og en kort beskrivelse, så regner vi ut et nøyaktig tilbud.',
   },
   {
-    question: 'Tilbyr dere håndverkertjenester?',
+    question: 'Selger dere også håndverkertjenester eller brannteknisk utstyr?',
     answer:
-      'Nei — vi er en nøytral rådgiver og selger ingen produkter eller håndverkertjenester. Dette sikrer at rådgivningen vår alltid er uavhengig og i ditt beste interesse.',
+      'Nei. Vi er en ren rådgivningsvirksomhet uten egne produkter eller utførende tjenester å selge — det holder anbefalingene våre uavhengige av hva som lønner seg for oss.',
   },
   {
-    question: 'Hva trengs for å få et pristilbud?',
+    question: 'Hva må jeg sende dere for å få et tilbud?',
     answer:
-      'For å gi et nøyaktig tilbud trenger vi: adresse/matrikkel, antall etasjer og bruksareal, tegninger (situasjonsplan og plantegninger) og en kort prosjektbeskrivelse. Send dette til oss så sender vi tilbud innen 24 timer.',
+      'Adresse eller matrikkelnummer, plantegninger (situasjonsplan og planløsning) og noen ord om hva prosjektet går ut på. Med det på plass svarer vi normalt med fastpris innen 24 timer.',
   },
   {
-    question: 'Hvor lang tid tar det å utarbeide et brannkonsept?',
+    question: 'Hvor raskt kan dere levere et ferdig brannkonsept?',
     answer:
-      'Leveringstid avhenger av prosjektets omfang og vår arbeidsbelastning. For de fleste prosjekter leverer vi innen 5–10 virkedager etter mottatt bestilling og komplett underlag. Har du tidsfrist, oppgi dette i forespørselen.',
+      'Vanligvis 5–10 virkedager fra vi har mottatt bestilling og komplett underlag, avhengig av omfang og hvor mye vi har på gang. Har du en frist å forholde deg til, si ifra ved bestilling så prioriterer vi deretter.',
   },
   {
     question: 'Tilbyr dere brannkonsept utenfor Harstad?',
@@ -79,10 +79,11 @@ export default function BrannkonseptPage() {
             <div className="w-1 bg-brand-orange rounded-full shrink-0" />
             <div>
               <h1 className="text-brand-black text-4xl lg:text-5xl font-black max-w-2xl">
-                Brannkonsept i Harstad
+                Brannkonsept for byggesaker i Harstad
               </h1>
               <p className="hero-3 text-brand-darkgray text-lg mt-4 max-w-xl leading-relaxed">
-                Vi utarbeider helhetlige brannkonsept for byggesaker i Harstad og Sør-Troms. Fastpris, rask levering og sentral godkjenning.
+                Skal kommunen behandle byggesøknaden din, trenger den som regel et brannkonsept i bunnen.
+                Vi utarbeider det til fastpris, enten det gjelder et nybygg eller et tilbygg til et eldre hus.
               </p>
             </div>
           </div>
@@ -97,7 +98,7 @@ export default function BrannkonseptPage() {
             <div className="lg:w-[68%]">
               <ScrollReveal>
                 <p className="text-brand-darkgray text-lg leading-relaxed mb-8">
-                  Et brannkonsept er en skriftlig rapport som oppsummerer bygningens brannsikkerhetsnivå. Ved byggesaker krever kommunen som regel prosjekteringsdokumentasjon på brannkonseptnivå — en helhetlig overordnet plan som ivaretar brannsikkerheten både for det omsøkte tiltaket og den øvrige bygningsmassen. Vi hjelper private, arkitekter, entreprenører og utbyggere i Harstad og omegn med å utarbeide komplette brannkonsept til fast pris.
+                  Et brannkonsept er en skriftlig rapport som viser hvordan bygget ditt ivaretar kravene til brannsikkerhet — både for det du skal bygge og for resten av bygningsmassen det inngår i. De fleste byggesaker i Harstad kommune krever et slikt dokument før søknaden kan behandles. Vi utarbeider brannkonsept for private, arkitekter, entreprenører og utbyggere, enten prosjektet er et nybygg eller en ombygging av et eldre hus i sentrum.
                 </p>
               </ScrollReveal>
 
@@ -246,10 +247,10 @@ export default function BrannkonseptPage() {
         <section className="bg-brand-dark py-14 border-t-2 border-brand-orange">
           <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-brand-white text-2xl lg:text-3xl font-black mb-4">
-              Kontakt oss for uforpliktende tilbud på brannkonsept i Harstad
+              Skal du søke kommunen om byggetillatelse?
             </h2>
             <Link href="/kontakt-oss" className="inline-block bg-brand-orange text-brand-white font-bold px-8 py-3.5 rounded-[10px] hover:opacity-90 transition-opacity">
-              Få tilbud nå
+              Få tilbud på brannkonsept
             </Link>
           </div>
         </section>
