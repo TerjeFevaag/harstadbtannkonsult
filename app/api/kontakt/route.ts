@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { MAX_FILES, BLOB_PATH_PREFIX } from '@/lib/attachments'
 
 const MAILERSEND_API_URL = 'https://api.mailersend.com/v1/email'
 const TO_EMAIL = 'post@harstadbrannkonsult.no'
@@ -7,9 +8,7 @@ const FROM_NAME = 'Brannkonsult AS – kontaktskjema'
 
 const GENERIC_ERROR = 'Noe gikk galt. Prøv igjen senere, eller ring oss direkte.'
 
-const MAX_FILES = 5
-const MAX_TOTAL_BYTES = 4 * 1024 * 1024 // 4 MB — trygt under Vercels grense for forespørselsstørrelse
-const ALLOWED_TYPES = new Set(['application/pdf', 'image/jpeg', 'image/png', 'image/webp'])
+type Vedlegg = { url: string; filename: string }
 
 function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
@@ -24,23 +23,54 @@ function escapeHtml(value: string) {
     .replace(/'/g, '&#039;')
 }
 
-function sanitizeFilename(name: string) {
-  return name.replace(/[^a-zA-Z0-9æøåÆØÅ.\-_ ]/g, '_').slice(0, 150) || 'vedlegg'
+function isValidBlobUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url)
+    return (
+      parsed.protocol === 'https:' &&
+      parsed.hostname.endsWith('.public.blob.vercel-storage.com') &&
+      parsed.pathname.startsWith(`/${BLOB_PATH_PREFIX}`)
+    )
+  } catch {
+    return false
+  }
+}
+
+function parseVedlegg(value: unknown): Vedlegg[] | null {
+  if (value === undefined || value === null) return []
+  if (!Array.isArray(value)) return null
+  if (value.length > MAX_FILES) return null
+
+  const result: Vedlegg[] = []
+  for (const entry of value) {
+    if (
+      typeof entry !== 'object' ||
+      entry === null ||
+      typeof (entry as Record<string, unknown>).url !== 'string' ||
+      typeof (entry as Record<string, unknown>).filename !== 'string'
+    ) {
+      return null
+    }
+    const { url, filename } = entry as { url: string; filename: string }
+    if (!isValidBlobUrl(url)) return null
+    result.push({ url, filename: filename.slice(0, 150) })
+  }
+  return result
 }
 
 export async function POST(request: NextRequest) {
-  let formData: FormData
+  let body: unknown
   try {
-    formData = await request.formData()
+    body = await request.json()
   } catch {
     return NextResponse.json({ error: 'Ugyldig forespørsel.' }, { status: 400 })
   }
 
-  const navn = formData.get('navn')
-  const epost = formData.get('epost')
-  const telefon = formData.get('telefon')
-  const prosjekttype = formData.get('prosjekttype')
-  const melding = formData.get('melding')
+  if (typeof body !== 'object' || body === null) {
+    return NextResponse.json({ error: 'Ugyldig forespørsel.' }, { status: 400 })
+  }
+
+  const { navn, epost, telefon, prosjekttype, melding, vedlegg } = body as Record<string, unknown>
 
   if (typeof navn !== 'string' || navn.trim().length < 2) {
     return NextResponse.json({ error: 'Vennligst oppgi navnet ditt.' }, { status: 400 })
@@ -51,11 +81,16 @@ export async function POST(request: NextRequest) {
   if (typeof melding !== 'string' || melding.trim().length < 5) {
     return NextResponse.json({ error: 'Vennligst skriv en melding.' }, { status: 400 })
   }
-  if (telefon !== null && typeof telefon !== 'string') {
+  if (telefon !== undefined && telefon !== null && typeof telefon !== 'string') {
     return NextResponse.json({ error: 'Ugyldig telefonnummer.' }, { status: 400 })
   }
-  if (prosjekttype !== null && typeof prosjekttype !== 'string') {
+  if (prosjekttype !== undefined && prosjekttype !== null && typeof prosjekttype !== 'string') {
     return NextResponse.json({ error: 'Ugyldig prosjekttype.' }, { status: 400 })
+  }
+
+  const safeVedlegg = parseVedlegg(vedlegg)
+  if (safeVedlegg === null) {
+    return NextResponse.json({ error: 'Ugyldige vedlegg.' }, { status: 400 })
   }
 
   const safeNavn = navn.trim()
@@ -64,73 +99,37 @@ export async function POST(request: NextRequest) {
   const safeProsjekttype = typeof prosjekttype === 'string' ? prosjekttype.trim() : ''
   const safeMelding = melding.trim()
 
-  const uploadedFiles = formData
-    .getAll('vedlegg')
-    .filter((entry): entry is File => entry instanceof File && entry.size > 0)
-
-  if (uploadedFiles.length > MAX_FILES) {
-    return NextResponse.json({ error: `Du kan laste opp maks ${MAX_FILES} filer.` }, { status: 400 })
-  }
-
-  let totalBytes = 0
-  for (const file of uploadedFiles) {
-    if (!ALLOWED_TYPES.has(file.type)) {
-      return NextResponse.json(
-        { error: `${file.name} har et filformat vi ikke støtter. Bruk PDF, JPG, PNG eller WEBP.` },
-        { status: 400 }
-      )
-    }
-    totalBytes += file.size
-  }
-  if (totalBytes > MAX_TOTAL_BYTES) {
-    return NextResponse.json(
-      { error: `Vedleggene er til sammen for store. Maks ${(MAX_TOTAL_BYTES / (1024 * 1024)).toFixed(0)} MB totalt.` },
-      { status: 400 }
-    )
-  }
-
   const apiKey = process.env.MAILERSEND_API_KEY
   if (!apiKey) {
     console.error('MAILERSEND_API_KEY er ikke satt')
     return NextResponse.json({ error: GENERIC_ERROR }, { status: 500 })
   }
 
-  let attachments: { content: string; filename: string; disposition: string }[]
-  try {
-    attachments = await Promise.all(
-      uploadedFiles.map(async (file) => {
-        const buffer = Buffer.from(await file.arrayBuffer())
-        return {
-          content: buffer.toString('base64'),
-          filename: sanitizeFilename(file.name),
-          disposition: 'attachment',
-        }
-      })
-    )
-  } catch (error) {
-    console.error('Kunne ikke lese vedlegg', error)
-    return NextResponse.json({ error: GENERIC_ERROR }, { status: 500 })
-  }
-
+  const vedleggTextLines = safeVedlegg.map((v) => `- ${v.filename}: ${v.url}`)
   const textBody = [
     `Navn: ${safeNavn}`,
     `E-post: ${safeEpost}`,
     `Telefon: ${safeTelefon || 'Ikke oppgitt'}`,
     `Prosjekttype: ${safeProsjekttype || 'Ikke oppgitt'}`,
-    attachments.length > 0 ? `Vedlegg: ${attachments.map((a) => a.filename).join(', ')}` : '',
+    ...(vedleggTextLines.length > 0 ? ['', 'Vedlegg:', ...vedleggTextLines] : []),
     '',
     'Melding:',
     safeMelding,
-  ]
-    .filter((line) => line !== '')
-    .join('\n')
+  ].join('\n')
+
+  const vedleggHtml =
+    safeVedlegg.length > 0
+      ? `<p><strong>Vedlegg:</strong></p><ul>${safeVedlegg
+          .map((v) => `<li><a href="${v.url}">${escapeHtml(v.filename)}</a></li>`)
+          .join('')}</ul>`
+      : ''
 
   const htmlBody = `
     <p><strong>Navn:</strong> ${escapeHtml(safeNavn)}</p>
     <p><strong>E-post:</strong> ${escapeHtml(safeEpost)}</p>
     <p><strong>Telefon:</strong> ${escapeHtml(safeTelefon || 'Ikke oppgitt')}</p>
     <p><strong>Prosjekttype:</strong> ${escapeHtml(safeProsjekttype || 'Ikke oppgitt')}</p>
-    ${attachments.length > 0 ? `<p><strong>Vedlegg:</strong> ${escapeHtml(attachments.map((a) => a.filename).join(', '))}</p>` : ''}
+    ${vedleggHtml}
     <p><strong>Melding:</strong></p>
     <p>${escapeHtml(safeMelding).replace(/\n/g, '<br>')}</p>
   `.trim()
@@ -149,7 +148,6 @@ export async function POST(request: NextRequest) {
         subject: `Ny henvendelse fra ${safeNavn}`,
         text: textBody,
         html: htmlBody,
-        ...(attachments.length > 0 ? { attachments } : {}),
       }),
     })
 
