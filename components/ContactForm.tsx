@@ -17,7 +17,7 @@ function validateFiles(list: File[]): string {
   }
   const invalidType = list.find((file) => !ALLOWED_ATTACHMENT_TYPES.includes(file.type))
   if (invalidType) {
-    return `${invalidType.name} har et filformat vi ikke støtter. Bruk PDF, JPG, PNG eller WEBP.`
+    return `${invalidType.name} har et filformat vi ikke støtter. Bruk PDF, JPG, PNG, WEBP eller Word (.doc/.docx).`
   }
   const tooLarge = list.find((file) => file.size > MAX_FILE_SIZE_BYTES)
   if (tooLarge) {
@@ -226,7 +226,7 @@ export default function ContactForm() {
           className="flex items-center gap-2 w-full px-4 py-3 border border-dashed border-brand-gray rounded-[10px] text-brand-darkgray text-sm cursor-pointer hover:border-brand-orange transition-colors"
         >
           <Paperclip size={16} className="shrink-0" />
-          Last opp tegninger eller bilder (PDF, JPG, PNG)
+          Last opp tegninger, bilder eller Word-dokumenter
         </label>
         <input
           ref={fileInputRef}
@@ -234,7 +234,7 @@ export default function ContactForm() {
           id="vedlegg"
           name="vedlegg"
           multiple
-          accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp"
+          accept=".pdf,.jpg,.jpeg,.png,.webp,.doc,.docx,application/pdf,image/jpeg,image/png,image/webp,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           onChange={handleFileChange}
           className="sr-only"
         />
