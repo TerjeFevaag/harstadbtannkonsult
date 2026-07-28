@@ -42,13 +42,30 @@ export default function ContactForm() {
   }
 
   function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
-    const list = Array.from(event.target.files ?? [])
-    const error = validateFiles(list)
-    setFileError(error)
-    setFiles(error ? [] : list)
-    if (error) {
-      syncFileInput([])
+    const newFiles = Array.from(event.target.files ?? [])
+
+    // Legg til nye filer i tillegg til de som allerede er valgt, i stedet for å erstatte dem
+    // (filvelgeren gir bare de filene som ble valgt i akkurat denne økten, ikke de fra forrige).
+    const seen = new Set(files.map((f) => `${f.name}-${f.size}-${f.lastModified}`))
+    const merged = [...files]
+    for (const file of newFiles) {
+      const key = `${file.name}-${file.size}-${file.lastModified}`
+      if (!seen.has(key)) {
+        merged.push(file)
+        seen.add(key)
+      }
     }
+
+    const error = validateFiles(merged)
+    if (error) {
+      setFileError(error)
+      syncFileInput(files) // behold forrige gyldige utvalg i selve inputen
+      return
+    }
+
+    setFileError('')
+    setFiles(merged)
+    syncFileInput(merged)
   }
 
   function removeFile(index: number) {
