@@ -48,7 +48,7 @@ export default function KontaktOssPage() {
           <div className="flex flex-col lg:flex-row gap-16">
             {/* Form */}
             <ScrollReveal className="lg:w-[60%] border border-brand-gray rounded-[10px] p-8">
-              <h2 className="text-brand-black text-2xl font-black mb-6">Send oss en forespørsel</h2>
+              <h2 className="text-brand-black text-2xl font-black mb-6">Fastpris i hånden på 24 timer</h2>
               <ContactForm />
             </ScrollReveal>
 
