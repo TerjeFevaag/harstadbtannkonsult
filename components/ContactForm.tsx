@@ -1,34 +1,78 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
-import { CheckCircle } from 'lucide-react'
+import { useRef, useState, type ChangeEvent, type FormEvent } from 'react'
+import { CheckCircle, Paperclip, X } from 'lucide-react'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
+
+const MAX_FILES = 5
+const MAX_TOTAL_BYTES = 4 * 1024 * 1024 // 4 MB
+const ALLOWED_TYPES = ['application/pdf', 'image/jpeg', 'image/png', 'image/webp']
+
+function formatBytes(bytes: number) {
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
+}
+
+function validateFiles(list: File[]): string {
+  if (list.length > MAX_FILES) {
+    return `Du kan laste opp maks ${MAX_FILES} filer.`
+  }
+  const invalidType = list.find((file) => !ALLOWED_TYPES.includes(file.type))
+  if (invalidType) {
+    return `${invalidType.name} har et filformat vi ikke støtter. Bruk PDF, JPG, PNG eller WEBP.`
+  }
+  const totalBytes = list.reduce((sum, file) => sum + file.size, 0)
+  if (totalBytes > MAX_TOTAL_BYTES) {
+    return `Filene er til sammen for store (${formatBytes(totalBytes)}). Maks ${formatBytes(MAX_TOTAL_BYTES)} totalt.`
+  }
+  return ''
+}
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const [files, setFiles] = useState<File[]>([])
+  const [fileError, setFileError] = useState('')
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  function syncFileInput(list: File[]) {
+    if (!fileInputRef.current) return
+    const dataTransfer = new DataTransfer()
+    list.forEach((file) => dataTransfer.items.add(file))
+    fileInputRef.current.files = dataTransfer.files
+  }
+
+  function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
+    const list = Array.from(event.target.files ?? [])
+    const error = validateFiles(list)
+    setFileError(error)
+    setFiles(error ? [] : list)
+    if (error) {
+      syncFileInput([])
+    }
+  }
+
+  function removeFile(index: number) {
+    const updated = files.filter((_, i) => i !== index)
+    setFiles(updated)
+    setFileError('')
+    syncFileInput(updated)
+  }
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    if (fileError) return
+
     setStatus('submitting')
     setErrorMessage('')
 
     const form = event.currentTarget
     const formData = new FormData(form)
-    const payload = {
-      navn: formData.get('navn'),
-      epost: formData.get('epost'),
-      telefon: formData.get('telefon'),
-      prosjekttype: formData.get('prosjekttype'),
-      melding: formData.get('melding'),
-    }
 
     try {
       const response = await fetch('/api/kontakt', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: formData,
       })
 
       const data = await response.json().catch(() => null)
@@ -41,6 +85,7 @@ export default function ContactForm() {
 
       setStatus('success')
       form.reset()
+      setFiles([])
     } catch {
       setStatus('error')
       setErrorMessage('Kunne ikke sende meldingen. Sjekk nettforbindelsen og prøv igjen.')
@@ -133,6 +178,62 @@ export default function ContactForm() {
           className="w-full px-4 py-3 border border-brand-gray rounded-[10px] text-brand-black placeholder:text-brand-darkgray focus:outline-none focus:border-brand-orange transition-colors resize-none"
           placeholder="Beskriv prosjektet ditt kort..."
         />
+      </div>
+
+      <div>
+        <label htmlFor="vedlegg" className="block text-sm font-bold text-brand-black mb-1.5">
+          Vedlegg (valgfritt)
+        </label>
+        <label
+          htmlFor="vedlegg"
+          className="flex items-center gap-2 w-full px-4 py-3 border border-dashed border-brand-gray rounded-[10px] text-brand-darkgray text-sm cursor-pointer hover:border-brand-orange transition-colors"
+        >
+          <Paperclip size={16} className="shrink-0" />
+          Last opp tegninger eller bilder (PDF, JPG, PNG)
+        </label>
+        <input
+          ref={fileInputRef}
+          type="file"
+          id="vedlegg"
+          name="vedlegg"
+          multiple
+          accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp"
+          onChange={handleFileChange}
+          className="sr-only"
+        />
+        <p className="text-xs text-brand-darkgray mt-1.5">
+          Maks {MAX_FILES} filer, {formatBytes(MAX_TOTAL_BYTES)} totalt.
+        </p>
+
+        {fileError && (
+          <p role="alert" className="text-sm text-brand-red mt-2">
+            {fileError}
+          </p>
+        )}
+
+        {files.length > 0 && (
+          <ul className="mt-3 space-y-2">
+            {files.map((file, i) => (
+              <li
+                key={`${file.name}-${i}`}
+                className="flex items-center justify-between gap-2 px-3 py-2 border border-brand-gray rounded-[8px] text-sm"
+              >
+                <span className="truncate text-brand-black">
+                  {file.name}{' '}
+                  <span className="text-brand-darkgray">({formatBytes(file.size)})</span>
+                </span>
+                <button
+                  type="button"
+                  onClick={() => removeFile(i)}
+                  className="text-brand-darkgray hover:text-brand-orange shrink-0"
+                  aria-label={`Fjern ${file.name}`}
+                >
+                  <X size={16} />
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {status === 'error' && (
