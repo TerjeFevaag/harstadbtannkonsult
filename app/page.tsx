@@ -72,11 +72,8 @@ const stats = [
 
 const reviews = [
   {
-    quote:
-      'Lett å få kontakt med firmaet på ulike spørsmål som dukker opp underveis. Jeg har kun hatt gode opplevelser, selv om ikke alt var helt klart for meg som ufaglært.',
-    author: 'Jan-David Antonsen',
-    company: 'Anton Arkitekt AS',
-    date: '11. mai 2026',
+    quote: 'God kommunikasjon. Rask utførelse. Alt helt topp!',
+    author: 'Marius Størseth',
   },
   {
     quote:
@@ -104,11 +101,8 @@ const reviews = [
     date: '23. januar 2023',
   },
   {
-    quote:
-      'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Måtte endre noe i rapporten pga ny planløsning. Ny oppdatert rapport innen kort tid. Alt til bra priser.',
-    author: 'Egil Hellestø',
-    company: 'Boplass Eiendom',
-    date: '5. mai 2026',
+    quote: 'Anbefales. Kjapp og rimelig med utførelsen.',
+    author: 'Anders Kofoed',
   },
 ]
 
