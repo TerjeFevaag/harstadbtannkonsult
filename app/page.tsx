@@ -73,10 +73,10 @@ const stats = [
 const reviews = [
   {
     quote:
-      'Godt samarbeid og leverer på kort varsel. Hyggelig å snakke med Thomas Hansen som er ansvarlig prosjekterende.',
-    author: 'Michel Zurawiecki',
-    company: 'Husar Arkitekter AS',
-    date: '15. september 2022',
+      'Lett å få kontakt med firmaet på ulike spørsmål som dukker opp underveis. Jeg har kun hatt gode opplevelser, selv om ikke alt var helt klart for meg som ufaglært.',
+    author: 'Jan-David Antonsen',
+    company: 'Anton Arkitekt AS',
+    date: '11. mai 2026',
   },
   {
     quote:
@@ -105,8 +105,10 @@ const reviews = [
   },
   {
     quote:
-      'Rask og god kommunikasjon. Leverte raskt det vi trengte av dokumentasjon til en fornuftig pris. Ble ikke tilbudt en dyr dokumentasjonspakke som var overdimensjonert i henhold til vårt prosjekt.',
-    author: 'Heidi Spinnangr',
+      'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Måtte endre noe i rapporten pga ny planløsning. Ny oppdatert rapport innen kort tid. Alt til bra priser.',
+    author: 'Egil Hellestø',
+    company: 'Boplass Eiendom',
+    date: '5. mai 2026',
   },
 ]
 
