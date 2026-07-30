@@ -73,10 +73,10 @@ const stats = [
 const reviews = [
   {
     quote:
-      'På spørsmål om brannkonsept, og ansvarsrett for fagområdet, fikk vi raskt og proffesjonelt svar. Hyggelig, ryddig og konstruktiv oppfølging.',
-    author: 'Sverre Krefting',
-    company: 'Sivilarkitekt',
-    date: '30. april 2026',
+      'Godt samarbeid og leverer på kort varsel. Hyggelig å snakke med Thomas Hansen som er ansvarlig prosjekterende.',
+    author: 'Michel Zurawiecki',
+    company: 'Husar Arkitekter AS',
+    date: '15. september 2022',
   },
   {
     quote:
