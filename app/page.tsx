@@ -77,26 +77,26 @@ const reviews = [
   },
   {
     quote:
-      'Godt fornøyd med brannsikringsvurdering som ble gjort, og at firmaet tok ansvarsrett for brannsikkerhet i vår sak. Rapporten førte til ferdigattest hos kommunen for tilbygg til en dobbeltgarasje.',
+      'Jeg kontaktet Brannkonsult i forbindelse med et utbygningsprosjekt der jeg fryktet at det ville være komplisert å tilfredsstille brannkrav som ville komme som en følge av planene. Gjennom tidlige samtaler med Brannkonsult ble det tydelig at dette kunne la seg gjøre uten så omfattende tiltak som opprinnelig fryktet. En rapport med utfyllende info om krav og praktiske løsninger ble utarbeidet, og dette førte til at jeg valgte å realisere prosjektet.',
     author: 'Harald Solberg',
     date: '8. februar 2023',
   },
   {
     quote:
-      'Veldig fornøyd med utført prosjektering og profesjonalisme av Brannkonsult AS!',
-    author: 'Wojtek Hryniewiecki',
-    company: 'Front Arkitektur AS',
-    date: '13. oktober 2024',
+      'Lett å få kontakt med firmaet på ulike spørsmål som dukker opp underveis. Jeg har kun hatt gode opplevelser, selv om ikke alt var helt klart for meg som ufaglært.',
+    author: 'Jan-David Antonsen',
+    company: 'Anton Arkitekt AS',
+    date: '11. mai 2026',
   },
   {
     quote:
-      'Som privatperson i et eget ombyggingsprosjekt i gammel murgård, som ble fanget inn i TEK17, ble jeg overrasket av omfanget og nødvendigheten av å benytte eksterne konsulenter. Når det er sagt, så var jeg fornøyd med både kvaliteten og tigjengeligheten av tjenestene til Brannkonsult.',
+      'Ryddig og profesjonelt, kort leveringstid på prosjektering som var tydelig gjort av noen med kompetanse innen feltet.',
     author: 'Helge Torp',
     date: '7. juni 2022',
   },
   {
     quote:
-      'Jeg kontaktet Brannkonsult i forbindelse med et utbygningsprosjekt der jeg fryktet at det ville være komplisert å tilfredsstille brannkrav som ville komme som en følge av planene. Gjennom tidlige samtaler med Brannkonsult ble det tydelig at dette kunne la seg gjøre uten så omfattende tiltak som opprinnelig fryktet. En rapport med utfyllende info om krav og praktiske løsninger ble utarbeidet, og dette førte til at jeg valgte å realisere prosjektet.',
+      'Greit mottatt per telefon. Rask og grei utførelse av prosjektering. Lett å forstå.',
     author: 'Jan Arthur Grip Nilsen',
     date: '23. januar 2023',
   },
