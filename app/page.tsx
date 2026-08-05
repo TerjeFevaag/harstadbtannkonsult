@@ -102,8 +102,9 @@ const reviews = [
   },
   {
     quote: 'Brannkonsult utførte en meget god jobb til avtalt tid og pris. Vi er meget fornøyd.',
-    author: 'Frode Rødøy',
-    date: '5. juli 2021',
+    author: 'Magnar Larsen',
+    company: 'Bygg-Larsen AS',
+    date: '1. juli 2021',
   },
 ]
 
