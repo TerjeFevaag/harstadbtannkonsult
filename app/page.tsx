@@ -72,37 +72,38 @@ const stats = [
 
 const reviews = [
   {
-    quote: 'God kommunikasjon. Rask utførelse. Alt helt topp!',
+    quote: 'God og effektiv kommunikasjon, og tjenesten svarte til forventningene.',
     author: 'Marius Størseth',
+    date: '4. juli 2023',
   },
   {
     quote:
-      'Jeg kontaktet Brannkonsult i forbindelse med et utbygningsprosjekt der jeg fryktet at det ville være komplisert å tilfredsstille brannkrav som ville komme som en følge av planene. Gjennom tidlige samtaler med Brannkonsult ble det tydelig at dette kunne la seg gjøre uten så omfattende tiltak som opprinnelig fryktet. En rapport med utfyllende info om krav og praktiske løsninger ble utarbeidet, og dette førte til at jeg valgte å realisere prosjektet.',
+      'Godt fornøyd med brannsikringsvurdering som ble gjort, og at firmaet tok ansvarsrett for brannsikkerhet i vår sak. Rapporten førte til ferdigattest hos kommunen for tilbygg til en dobbeltgarasje.',
     author: 'Harald Solberg',
     date: '8. februar 2023',
   },
   {
-    quote:
-      'Raskt svar, relevant og grundig rapport, kommunen likte måten det var gjort på. Måtte endre noe i rapporten pga ny planløsning. Ny oppdatert rapport innen kort tid. Alt til bra priser.',
+    quote: 'Rask respons, levert til riktig pris.',
     author: 'Egil Hellestø',
     company: 'Boplass Eiendom',
     date: '13. april 2026',
   },
   {
     quote:
-      'Ryddig og profesjonelt, kort leveringstid på prosjektering som var tydelig gjort av noen med kompetanse innen feltet.',
+      'Som privatperson i et eget ombyggingsprosjekt i gammel murgård, som ble fanget inn i TEK17, ble jeg overrasket av omfanget og nødvendigheten av å benytte eksterne konsulenter. Når det er sagt, så var jeg fornøyd med både kvaliteten og tigjengeligheten av tjenestene til Brannkonsult.',
     author: 'Helge Torp',
     date: '7. juni 2022',
   },
   {
     quote:
-      'Greit mottatt per telefon. Rask og grei utførelse av prosjektering. Lett å forstå.',
+      'Jeg kontaktet Brannkonsult i forbindelse med et utbygningsprosjekt der jeg fryktet at det ville være komplisert å tilfredsstille brannkrav som ville komme som en følge av planene. Gjennom tidlige samtaler med Brannkonsult ble det tydelig at dette kunne la seg gjøre uten så omfattende tiltak som opprinnelig fryktet. En rapport med utfyllende info om krav og praktiske løsninger ble utarbeidet, og dette førte til at jeg valgte å realisere prosjektet.',
     author: 'Jan Arthur Grip Nilsen',
     date: '23. januar 2023',
   },
   {
-    quote: 'Anbefales. Kjapp og rimelig med utførelsen.',
-    author: 'Anders Kofoed',
+    quote: 'Brannkonsult utførte en meget god jobb til avtalt tid og pris. Vi er meget fornøyd.',
+    author: 'Frode Rødøy',
+    date: '5. juli 2021',
   },
 ]
 
