@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
         destination: "/branninspeksjon",
         permanent: true,
       },
+      // Vercel-URLer (hoved + preview-deploys) skal ikke være indekserbare duplikater av hoveddomenet
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: ".+\\.vercel\\.app" }],
+        destination: "https://harstadbrannkonsult.no/:path*",
+        permanent: true,
+      },
     ];
   },
 };
